@@ -1,0 +1,8 @@
+:root {
+  --primary-color: #d3c5f6;
+  --secondary-color: #3b2a30;
+}
+
+.main-page {
+  min-height: 100vh;
+}

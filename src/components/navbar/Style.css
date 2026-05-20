@@ -1,0 +1,28 @@
+.nav-container {
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100px;
+    padding: 20px;
+    border: 1px solid #000;
+}
+
+.nav-logo {
+    border-radius: 100%;
+    height: 50px;
+    width: 50px;
+    border: 1px solid #000;
+    margin-bottom: 50px;
+}
+
+.nav-content-container {
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-content-container p {
+    transform: rotate(270deg);
+    width: max-content;
+}
