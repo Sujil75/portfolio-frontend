@@ -1,0 +1,22 @@
+.about-container {
+    height: fit-content;
+    padding: 100px;
+    position: relative;
+}
+
+.about-blur-bg {
+    position: absolute;
+    inset: 0;
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    background: rgba(255, 255, 255, 0.03);
+    z-index: 1;
+    border-radius: 25px;
+}
+
+.about-content {
+    position: relative;
+    z-index: 2;
+}
