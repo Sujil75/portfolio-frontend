@@ -5,10 +5,10 @@ import './Style.css'
 function About() {
   return (
     <section className='about-container'>
-        <div className='about-blur-bg'></div>
+        <div className='pages-blur-bg'></div>
 
         <div className='about-content'>
-            <div>
+            <div className='about-intro-container'>
                 <div className='available-container'>
                     <strong>ABOUT</strong>
                 </div>
@@ -18,14 +18,18 @@ function About() {
                 <p>The story, the craft, and what drives the work</p>
             </div>
 
-            <div>
-                <div>
+            <section className='about-desc'>
+                <div className='about-me-container'>
+                    <div className='about-me-blur-bg'></div>
+
                     <p>About me</p>
                 </div>
 
-                <ul>
+                <ul className='about-me-list'>
                     <li>
-                        <div>
+                        <div className='about-me-blur-bg'></div>
+
+                        <div className='about-me-list-content'>
                             <img src="" alt="email icon" />
 
                             <div>
@@ -36,7 +40,9 @@ function About() {
                     </li>
                     
                     <li>
-                        <div>
+                        <div className='about-me-blur-bg'></div>
+                        
+                        <div className='about-me-list-content'>
                             <img src="" alt="phone icon" />
 
                             <div>
@@ -47,7 +53,9 @@ function About() {
                     </li>
                     
                     <li>
-                        <div>
+                        <div className='about-me-blur-bg'></div>
+                        
+                        <div className='about-me-list-content'>
                             <img src="" alt="status icon" />
 
                             <div>
@@ -57,7 +65,7 @@ function About() {
                         </div>
                     </li>
                 </ul>
-            </div>
+            </section>
         </div>
     </section>
   )

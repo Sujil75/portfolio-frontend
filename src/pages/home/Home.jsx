@@ -6,7 +6,7 @@ import './Style.css'
 function Home() {
   return (
     <section className='home-container'>
-        <div className='home-blur-bg'></div>
+        <div className='pages-blur-bg'></div>
 
         <div className='home-content'>
             <div className='available-container'>
