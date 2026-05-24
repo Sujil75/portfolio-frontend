@@ -34,7 +34,7 @@ function About() {
 
                             <div>
                                 <h5>EMAIL</h5>
-                                <p>_____</p>
+                                <p>mail@gmail.com</p>
                             </div>
                         </div>
                     </li>

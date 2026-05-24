@@ -1,6 +1,7 @@
 .about-container {
-    height: fit-content;
-    padding: 100px;
+    box-sizing: border-box;
+    height: 100vh;
+    padding: 60px;
     position: relative;
 }
 
@@ -34,7 +35,7 @@
 .about-me-container {
     box-sizing: border-box;
     width: 50%;
-    height: 500px;
+    height: 400px;
     border: 2px solid grey;
     border-radius: 25px;
     padding: 50px;
@@ -52,7 +53,7 @@
 .about-me-list {
     box-sizing: border-box;
     width: 50%;
-    height: 500px;
+    height: 400px;
     list-style: none;
 
     display: flex;
@@ -64,10 +65,11 @@
 .about-me-list li {
     box-sizing: border-box;
     width: 100%;
-    height: 100px;
+    height: 80px;
     border: 2px solid grey;
     border-radius: 25px;
-    padding: 20px;
+    padding: 13px;
+    padding-left: 20px;
 
     position: relative;
     box-shadow: 0 0 10px 2px grey;
@@ -76,6 +78,23 @@
 .about-me-list-content {
     position: relative;
     z-index: 4;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.about-me-list-content img {
+    height: 50px;
+    width: 50px;
+}
+
+.about-me-list-content div>h5 {
+    font-size: 20px;
+}
+
+.about-me-list-content div>p {
+    font-size: 18px;
 }
 
 .about-me-blur-bg {
