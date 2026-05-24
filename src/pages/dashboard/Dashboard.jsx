@@ -1,7 +1,9 @@
 import React from 'react';
+
 import Navbar from '../../components/navbar/Navbar';
 import Home from '../home/Home';
 import About from '../about/About'
+import Skills from '../skills/Skills';
 
 import './Style.css';
 
@@ -16,6 +18,8 @@ function Dashboard() {
             <Home />
 
             <About />
+
+            <Skills />
         </main>
 
         <footer></footer>

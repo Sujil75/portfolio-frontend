@@ -4,12 +4,12 @@ import './Style.css'
 
 function About() {
   return (
-    <section className='about-container'>
-        <div className='pages-blur-bg'></div>
+    <section className='pages-container'>
+        <div className='glass'></div>
 
         <div className='about-content'>
             <div className='about-intro-container'>
-                <div className='available-container'>
+                <div className='topic-container'>
                     <strong>ABOUT</strong>
                 </div>
                 

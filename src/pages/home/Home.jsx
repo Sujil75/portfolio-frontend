@@ -5,11 +5,11 @@ import './Style.css'
 
 function Home() {
   return (
-    <section className='home-container'>
-        <div className='pages-blur-bg'></div>
+    <section className='pages-container'>
+        <div className='glass'></div>
 
         <div className='home-content'>
-            <div className='available-container'>
+            <div className='topic-container'>
                 <div className='available-color-container'></div>
                 
                 <strong>AVAILABLE TO WORK</strong>
