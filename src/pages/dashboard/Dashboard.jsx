@@ -2,10 +2,11 @@ import React from 'react';
 
 import Navbar from '../../components/navbar/Navbar';
 import Home from '../home/Home';
-import About from '../about/About'
+import About from '../about/About';
 import Skills from '../skills/Skills';
+import Education from '../education/Education';
 
-import './Style.css';
+import './Dashboard.css';
 
 function Dashboard() {
   return (
@@ -20,6 +21,8 @@ function Dashboard() {
             <About />
 
             <Skills />
+
+            <Education />
         </main>
 
         <footer></footer>

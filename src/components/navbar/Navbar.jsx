@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './Style.css'
+import './Navbar.css'
 
 function Navbar() {
   return (
@@ -11,14 +11,14 @@ function Navbar() {
         </div>
 
         <div className='nav-main-container'>
-          <ul className='nav-content-container'>
-            <li className='nav-content'>Home</li>
-            <li className='nav-content'>About</li>
-            <li className='nav-content'>Skills</li>
-            <li className='nav-content'>Education</li>
-            <li className='nav-content'>Cover Letter</li>
-            <li className='nav-content'>Contact</li>
-          </ul>
+          <div className='nav-content-container'>
+            <a href='#Home' className='nav-content'>Home</a>
+            <a href='#About' className='nav-content'>About</a>
+            <a href='#Skills' className='nav-content'>Skills</a>
+            <a href='#Education' className='nav-content'>Education</a>
+            <a href='#CoverLetter' className='nav-content'>Cover Letter</a>
+            <a href='#Contact' className='nav-content'>Contact</a>
+          </div>
 
           <button type='button'>Admin</button>
         </div>

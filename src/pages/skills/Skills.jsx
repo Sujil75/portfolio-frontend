@@ -1,20 +1,21 @@
 import React from 'react'
 
-import './Style.css'
+import SkillCard from '../../components/cards/SkillCard';
+import './Skills.css'
 
 function Skills() {
-  const checkList = [];
+  const skillsList = [];
 
   for (let i = 1; i <= 100; i++) {
-    checkList.push(i);
+    skillsList.push(i);
   };
 
   return (
-    <section className='pages-container'>
+    <section id='Skills' className='pages-container'>
       <div className='glass'></div>
 
       <div className='section-container'>
-        <div className='about-intro-container'>
+        <div className='pages-intro-container'>
           <div className='topic-container'>
               <strong>SKILLS</strong>
           </div>
@@ -24,17 +25,7 @@ function Skills() {
           <p>A living set of skills sharpened on real projects</p>
         </div>
 
-        <div>
-          <ul className='skills-list-container'>
-            {
-              checkList.map(each => {
-                return (
-                  <li></li>
-                );
-              })
-            }
-          </ul>
-        </div>
+        <SkillCard skillsList={skillsList} />
       </div>
     </section>
   )

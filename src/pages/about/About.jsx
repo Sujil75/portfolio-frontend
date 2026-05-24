@@ -1,14 +1,14 @@
 import React from 'react'
 
-import './Style.css'
+import './About.css'
 
 function About() {
   return (
-    <section className='pages-container'>
+    <section id='About' className='pages-container'>
         <div className='glass'></div>
 
         <div className='about-content'>
-            <div className='about-intro-container'>
+            <div className='pages-intro-container'>
                 <div className='topic-container'>
                     <strong>ABOUT</strong>
                 </div>

@@ -9,15 +9,6 @@
     gap: 20px;
 }
 
-.about-intro-container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    margin-bottom: 45px;
-}
-
 .about-desc {
     width: 100%;
     display: flex;

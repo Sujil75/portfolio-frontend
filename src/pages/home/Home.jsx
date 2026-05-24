@@ -1,11 +1,11 @@
 import React from 'react';
 import Navbar from '../../components/navbar/Navbar';
 
-import './Style.css'
+import './Home.css'
 
 function Home() {
   return (
-    <section className='pages-container'>
+    <section id='Home' className='pages-container'>
         <div className='glass'></div>
 
         <div className='home-content'>
