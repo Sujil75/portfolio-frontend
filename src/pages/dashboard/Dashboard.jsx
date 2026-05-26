@@ -6,6 +6,7 @@ import About from '../about/About';
 import Skills from '../skills/Skills';
 import Education from '../education/Education';
 import Projects from '../projects/Projects';
+import ContactMe from '../contactMe/ContactMe';
 
 import './Dashboard.css';
 
@@ -26,6 +27,8 @@ function Dashboard() {
             <Education />
 
             <Projects />
+
+            <ContactMe />
         </main>
 
         <footer></footer>

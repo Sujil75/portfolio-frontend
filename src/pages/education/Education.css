@@ -53,7 +53,7 @@
     transform: scale(1);
     opacity: 1;
     filter: blur(0);
-    box-shadow: 0 0 40px rgba(139, 92, 246, 0.35);
+    box-shadow: var(--bg-shadow-swiper);
 }
 
 /* Side Cards */

@@ -2,6 +2,11 @@
   --primary-color: #d3c5f6;
   --secondary-color: #3b2a30;
   --backdrop-blur: blur(12px);
+  --text: #fff;
+  --bg: rgba(255, 255, 255, 0.08);
+  --bg-shadow-swiper: 0 0 20px var(--primary-color), 
+                0 0 44px var(--secondary-color);
+  --bg-shadow: 0 0 6px 1px var(--primary-color);
 
   scroll-behavior: smooth;
 }

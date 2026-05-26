@@ -17,7 +17,7 @@ function Navbar() {
             <a href='#Skills' className='nav-content'>Skills</a>
             <a href='#Education' className='nav-content'>Education</a>
             <a href='#Projects' className='nav-content'>Projects</a>
-            <a href='#Contact' className='nav-content'>Contact</a>
+            <a href='#ContactMe' className='nav-content'>Contact Me</a>
           </div>
 
           <button type='button'>Admin</button>

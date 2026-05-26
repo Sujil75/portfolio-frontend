@@ -1,0 +1,138 @@
+.contact-me-container {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+}
+
+.contact-actions-container {
+    width: 100%;
+    height: 500px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.viewer-action-container {
+    box-sizing: border-box;
+    /* position: relative;
+    z-index: 3; */
+
+    height: 100%;
+    width: 50%;
+    padding: 2rem;
+
+    background: var(--primary-color);
+    border-radius: 25px;
+
+    box-shadow: var(--bg-shadow);
+}
+
+/* .viewer-glass {
+    position: absolute;
+    inset: 0;
+    background: var(--bg);
+    box-shadow: var(--bg-shadow);
+
+    backdrop-filter: var(--backdrop-blur);
+    -webkit-backdrop-filter: var(--backdrop-blur);
+
+    z-index: 4;
+    border-radius: 25px;
+} */
+
+.viewer-reach-out-form-container {
+    position: relative;
+    z-index: 5;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+
+    height: 100%;
+}
+
+.viewer-reach-out-form-container h2 {
+    color: var(--text);
+}
+
+.viewer-reach-out-form-container form {
+    height: inherit;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.form-row-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 40px;
+
+    width: 50%;
+
+    background: transparent;
+}
+
+.form-row-container h4 {
+    color: var(--text);
+}
+
+.form-row-container div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    height: fit-content;
+    width: fit-content;
+
+    position: relative;
+    inset: 0;
+}
+
+.form-row-container div > label {
+    position: absolute;
+    top: -10px;
+    left: 18px;
+
+    padding: 0 10px;
+    z-index: 7;
+
+    background: var(--primary-color);
+    color: var(--text);
+
+    font-size: 14px;
+    width: fit-content;
+}
+
+.form-row-container div > input, 
+.form-row-container div > select,
+.form-row-container div > textarea {
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 300px;
+    height: 50px;
+    border: 2px solid #000;
+    border-radius: 25px;
+    color: #000;
+
+    background: transparent;
+}
+
+.form-row-container div > textarea {
+    height: 140px;
+    width: 300px;
+    padding: 20px;
+}
+
+.form-row-container div > input:focus,
+.form-row-container div > select:focus {
+    outline: none;
+}
