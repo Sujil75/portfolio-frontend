@@ -7,6 +7,7 @@ import Skills from '../skills/Skills';
 import Education from '../education/Education';
 import Projects from '../projects/Projects';
 import ContactMe from '../contactMe/ContactMe';
+import Footer from '../../components/footer/Footer';
 
 import './Dashboard.css';
 
@@ -31,7 +32,9 @@ function Dashboard() {
             <ContactMe />
         </main>
 
-        <footer></footer>
+        <footer>
+          <Footer />
+        </footer>
     </section>
   )
 }

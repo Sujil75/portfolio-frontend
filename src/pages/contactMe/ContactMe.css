@@ -169,7 +169,7 @@
 
 .contact-me-list li:hover {
     transform: translateY(5px);
-    opacity: 0.8;
+    opacity: 1;
 
 }
 
