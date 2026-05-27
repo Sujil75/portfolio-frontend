@@ -1,5 +1,6 @@
 .dashboard-container {
     min-height: 100vh;
+    background-color: var(--background-primary);
 }
 
 .main-container {

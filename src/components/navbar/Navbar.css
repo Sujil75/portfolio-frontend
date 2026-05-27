@@ -21,6 +21,23 @@
     gap: 10px;
 }
 
+.logo-container p {
+    color: rgb(134, 6, 134);
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.logo-container h3 {
+    font-size: 23px;
+
+    background: linear-gradient(90deg, purple 0%, blue 50%, cyan 100%);
+
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    color: transparent;
+}
+
 .nav-logo {
     border-radius: 100%;
     height: 25px;
@@ -45,5 +62,58 @@
 
 .nav-content-container a {
     text-decoration: none;
-    color: #fff;
+    color: var(--nav-inactive);
+
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-content-container a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+
+    width: 100%;
+    height: 2px;
+    background: var(--accent-purple);
+
+    transform: translateX(0%) scaleX(0);
+    transform-origin: center;
+
+    transition: transform 0.4s ease;
+}
+
+.nav-content-container a:hover {
+    color: var(--primary-color);
+    font-weight: bold;
+
+    text-shadow: 0 0 10px var(--nav-active-glow), 0 0 20px var(--nav-active-glow);
+}
+
+.nav-content-container a:hover::after {
+    transform: translateX(0%) scaleX(1);
+}
+
+.nav-admin-btn {
+    box-sizing: border-box;
+    padding: 9px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    border-radius: 12px;
+    border: 0;
+
+    background: var(--primary-color);
+    color: var(--accent-purple);
+
+    transition: all 0.3s ease;
+}
+
+.nav-admin-btn:hover {
+    box-shadow: 0 0 10px #fff;
+    background: var(--accent-violet);
+    color: var(--text-primary);
+
+    cursor: pointer;
 }

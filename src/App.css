@@ -1,19 +1,90 @@
 :root {
-  --primary-color: #d3c5f6;
-  --secondary-color: #3b2a30;
-  --backdrop-blur: blur(12px);
-  --text: #fff;
+  --primary-color: #D3C5F6;
+  --secondary-color: #6D4AFF;
+  --backdrop-blur: blur(18px);
+  --text: #F8FAFC;
   --bg: rgba(255, 255, 255, 0.08);
-  --bg-shadow-swiper: 0 0 20px var(--primary-color), 
-                0 0 44px var(--secondary-color);
-  --bg-shadow: 0 0 6px 1px var(--primary-color);
+  --bg-shadow-swiper:
+    0 0 20px rgba(211, 197, 246, 0.45),
+    0 0 44px rgba(109, 74, 255, 0.22);
+  --bg-shadow:
+    0 0 10px rgba(211, 197, 246, 0.28);
+
+  /* Core Background System */
+  --background-primary: #09090F;
+  --background-secondary: #11111B;
+  --background-tertiary: #181825;
+  --background-card: rgba(255, 255, 255, 0.06);
+  --background-solid-card: #1A1A26;
+
+  /* Text Hierarchy */
+  --text-primary: #FFFFFF;
+  --text-secondary: #CBD5E1;
+  --text-muted: #94A3B8;
+  --text-disabled: #64748B;
+
+  /* Accent System */
+  --accent-purple: #8B5CF6;
+  --accent-violet: #A855F7;
+  --accent-indigo: #6366F1;
+  --accent-cyan: #22D3EE;
+  --accent-pink: #EC4899;
+
+  /* Border System */
+  --border-primary: rgba(255, 255, 255, 0.12);
+  --border-secondary: rgba(255, 255, 255, 0.08);
+  --border-active: rgba(139, 92, 246, 0.65);
+
+  /* Glow System */
+  --glow-primary:
+    0 0 12px rgba(139, 92, 246, 0.45);
+
+  --glow-strong:
+    0 0 24px rgba(139, 92, 246, 0.55),
+    0 0 48px rgba(109, 74, 255, 0.28);
+
+  --glow-cyan:
+    0 0 18px rgba(34, 211, 238, 0.35);
+
+  /* Buttons */
+  --button-primary-bg: linear-gradient(
+    135deg,
+    #8B5CF6,
+    #6366F1
+  );
+
+  --button-secondary-bg: rgba(255, 255, 255, 0.06);
+  --button-hover: #A855F7;
+
+  /* Inputs / Forms */
+  --input-bg: rgba(255, 255, 255, 0.04);
+  --input-border: rgba(255, 255, 255, 0.12);
+  --input-focus: #8B5CF6;
+  --input-label-bg: #151520;
+
+  /* Status */
+  --success: #10B981;
+  --warning: #F59E0B;
+  --error: #EF4444;
+  --info: #3B82F6;
+
+  /* Overlay */
+  --overlay-dark: rgba(9, 9, 15, 0.72);
+
+  /* Dividers */
+  --divider: rgba(255, 255, 255, 0.08);
+
+  /* Nav Elements */
+  --nav-inactive: #94A3B8;
+  --nav-hover: #D3C5F6;
+  --nav-active: #FFFFFF;
+  --nav-active-glow: 0 0 12px rgba(211, 197, 246, 0.45);
 
   scroll-behavior: smooth;
 }
 
 .main-page {
   min-height: 100vh;
-  background-color: var(--secondary-color);
 }
 
 .pages-container {
