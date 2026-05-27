@@ -1,5 +1,7 @@
 import React from 'react'
 
+import ContactMeForm from '../../components/forms/ContactMeForm';
+import ContactMeDetailsCard from '../../components/cards/ContactMeDetailsCard';
 import './ContactMe.css'
 
 const viewerTypes = [
@@ -44,59 +46,16 @@ function ContactMe() {
             </div>
 
             <div className='contact-actions-container'>
-                <div className='viewer-action-container'>
-                    {/*<div className='viewer-glass'></div>*/}
+                <div className='viewer-reach-out-form-container'>
+                    <h2>Reach Out Directly</h2>
 
-                    <div className='viewer-reach-out-form-container'>
-                        <h2>Reach Out Directly</h2>
+                    <ContactMeForm viewerTypes={viewerTypes} />
+                </div>
 
-                        <form>
-                            <div className='form-row-container'>
-                                <h4>Details</h4>
+                <div className='viewer-reach-out-online-container'>
+                    <h2>Find Me Online</h2>
 
-                                <div>
-                                    <label htmlFor='viewerName'>Name</label>
-
-                                    <input id='viewerName' />
-                                </div>
-
-                                <div>
-                                    <label htmlFor='viewerEmail'>Email</label>
-
-                                    <input id='viewerEmail' />
-                                </div>
-
-                                <div>
-                                    <label htmlFor='viewerType'>Who Are you</label>
-                                    <select>
-                                        {
-                                            viewerTypes.map(each => (
-                                                <option>{each}</option>
-                                            ))
-                                        }
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div className='form-row-container'>
-                                <h4>Message</h4>
-
-                                <div>
-                                    <label htmlFor='viewerSubject'>Subject</label>
-
-                                    <input id='viewerSubject' />
-                                </div>
-
-                                <div>
-                                    <label htmlFor='viewerMsg'>Message</label>
-
-                                    <textarea id='viewerMsg' />
-                                </div>
-
-                                <button type='button'>Submit</button>
-                            </div>
-                        </form>
-                    </div>
+                    <ContactMeDetailsCard viewerTypes={viewerTypes} />
                 </div>
             </div>
         </div>

@@ -24,47 +24,6 @@ function About() {
 
                     <p>About me</p>
                 </div>
-
-                <ul className='about-me-list'>
-                    <li>
-                        <div className='about-me-blur-bg'></div>
-
-                        <div className='about-me-list-content'>
-                            <img src="" alt="email icon" />
-
-                            <div>
-                                <h5>EMAIL</h5>
-                                <p>mail@gmail.com</p>
-                            </div>
-                        </div>
-                    </li>
-                    
-                    <li>
-                        <div className='about-me-blur-bg'></div>
-                        
-                        <div className='about-me-list-content'>
-                            <img src="" alt="phone icon" />
-
-                            <div>
-                                <h5>PHONE</h5>
-                                <p>_____</p>
-                            </div>
-                        </div>
-                    </li>
-                    
-                    <li>
-                        <div className='about-me-blur-bg'></div>
-                        
-                        <div className='about-me-list-content'>
-                            <img src="" alt="status icon" />
-
-                            <div>
-                                <h5>STATUS</h5>
-                                <p>_____</p>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
             </section>
         </div>
     </section>
