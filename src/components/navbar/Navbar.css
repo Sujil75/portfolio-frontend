@@ -104,14 +104,13 @@
     border-radius: 12px;
     border: 0;
 
-    background: var(--primary-color);
-    color: var(--accent-purple);
+    background: var(--background-primary);
+    color: var(--nav-inactive);
 
     transition: all 0.3s ease;
 }
 
 .nav-admin-btn:hover {
-    box-shadow: 0 0 10px #fff;
     background: var(--accent-violet);
     color: var(--text-primary);
 
