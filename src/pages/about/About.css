@@ -47,3 +47,88 @@
     position: relative;
     z-index: 4;
 }
+
+.user-img-card {
+    height: 500px;
+    width: 500px;
+
+    background: var(--background-primary);
+    border-radius: 25px;
+
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    perspective: 1000px;
+}
+
+.user-img-card:hover {
+    animation: shake 1s linear infinite;
+    transform-style: preserve-3d;
+}
+
+@keyframes shake {
+    0% {
+        transform: rotateY(0deg);
+    }
+    25% {
+        transform: rotateY(15deg);
+    }
+    50% {
+        transform: rotateY(0deg);
+    }
+    75% {
+        transform: rotateY(15deg);
+    }
+    100% {
+        transform: rotateY(0deg);
+    }
+}
+
+.user-img-card::before {
+    content: '';
+    position: absolute;
+    
+    height: 150%;
+    width: 150%;
+
+    background: conic-gradient(
+        transparent,
+        transparent,
+        transparent,
+        var(--accent-cyan)
+    );
+
+    animation: rotate 3s linear infinite;
+}
+
+.user-img-card::after {
+    position: absolute;
+    inset: 4px;
+
+    content: '';
+    background: var(--background-primary);
+    border-radius: 25px;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.user-img-card img {
+    height: calc(100% - 12px);
+    width: calc(100% - 12px);
+    border-radius: 25px;
+
+    position: relative;
+    z-index: 4;
+    object-fit: contain;
+}
