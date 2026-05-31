@@ -5,7 +5,6 @@
     padding: 20px;
     padding-left: 45px;
     padding-right: 45px;
-    border: 1px solid #000;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -13,6 +12,10 @@
     position: fixed;
     z-index: 1000;
     backdrop-filter: var(--backdrop-blur);
+    background: rgba(121, 120, 120, 0.589);
+
+    border-radius: 50px;
+    top: 5px;
 }
 
 .logo-container {
@@ -104,8 +107,8 @@
     border-radius: 12px;
     border: 0;
 
-    background: var(--background-primary);
-    color: var(--nav-inactive);
+    background: var(--nav-inactive);
+    color: var(--text-disabled);
 
     transition: all 0.3s ease;
 }

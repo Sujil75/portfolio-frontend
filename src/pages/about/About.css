@@ -20,7 +20,7 @@
 .about-me-container {
     box-sizing: border-box;
     width: 50%;
-    height: 400px;
+    height: 300px;
     border: 2px solid grey;
     border-radius: 25px;
     padding: 50px;
@@ -46,11 +46,13 @@
 .about-me-container p {
     position: relative;
     z-index: 4;
+
+    color: var(--text);
 }
 
 .user-img-card {
-    height: 500px;
-    width: 500px;
+    height: 400px;
+    width: 400px;
 
     background: var(--background-primary);
     border-radius: 25px;
@@ -99,7 +101,7 @@
         transparent,
         transparent,
         transparent,
-        var(--accent-cyan)
+        var(--border-active)
     );
 
     animation: rotate 3s linear infinite;
