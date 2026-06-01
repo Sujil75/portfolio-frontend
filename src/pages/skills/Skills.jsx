@@ -20,7 +20,7 @@ function Skills() {
               <strong>SKILLS</strong>
           </div>
           
-          <h1>Tools of the trade</h1>
+          <h1>Tools of the <span>trade</span></h1>
 
           <p>A living set of skills sharpened on real projects</p>
         </div>

@@ -13,7 +13,7 @@ function About() {
                     <strong>ABOUT</strong>
                 </div>
                 
-                <h1>A bit about me</h1>
+                <h1>A Bit About <span>Me</span></h1>
 
                 <p>The story, the craft, and what drives the work</p>
             </div>

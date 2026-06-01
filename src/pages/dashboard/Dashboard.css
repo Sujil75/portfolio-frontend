@@ -65,6 +65,15 @@
     color: var(--text-secondary);
 }
 
+.pages-intro-container span {
+    background: linear-gradient(90deg, var(--accent-purple) 0%, var(--accent-violet) 50%, var(--accent-cyan) 100%);
+
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    color: transparent;
+}
+
 .pages-intro-container p {
-    color: var(--text-);
+    color: var(--text-muted);
 }

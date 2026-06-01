@@ -11,11 +11,10 @@
 }
 
 .education-card {
-    background: rgba(255, 255, 255, 0.08);
+    background: var(--background-card);
     backdrop-filter: var(--backdrop-blur);
     -webkit-backdrop-filter: var(--backdrop-blur);
 
-    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 24px;
 
     padding: 2rem;
@@ -53,7 +52,7 @@
     transform: scale(1);
     opacity: 1;
     filter: blur(0);
-    box-shadow: var(--bg-shadow-swiper);
+    box-shadow: var(--glow-strong);
 }
 
 /* Side Cards */

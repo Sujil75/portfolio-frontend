@@ -45,7 +45,7 @@ function Education() {
                     <strong>EDUCATION</strong>
                 </div>
                 
-                <h1>The learning Path</h1>
+                <h1>The learning <span>Path</span></h1>
 
                 <p>Formal study and continuous growth</p>
             </div>

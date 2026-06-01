@@ -42,12 +42,12 @@ function Projects() {
         <div className='projects-container'>
             <div className='pages-intro-container'>
                 <div className='topic-container'>
-                    <strong>EDUCATION</strong>
+                    <strong>PROJECTS</strong>
                 </div>
                 
-                <h1>The learning Path</h1>
+                <h1>Selected <span>Work</span></h1>
 
-                <p>Formal study and continuous growth</p>
+                <p>A hand full of recent build --- production code, design system and experiments</p>
             </div>
             
             <ProjectsCard projectsData={projectsData} />

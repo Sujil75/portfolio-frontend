@@ -11,10 +11,10 @@
 }
 
 .projects-card {
+    background: var(--background-card);
     backdrop-filter: var(--backdrop-blur);
     -webkit-backdrop-filter: var(--backdrop-blur);
 
-    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 25px;
     
     padding: 2rem;
@@ -51,7 +51,7 @@
     transform: scale(1);
     opacity: 1;
     filter: none;
-    box-shadow: var(--bg-shadow-swiper);
+    box-shadow: var(--glow-strong);
 }
 
 .swiper-slide-prev .projects-card, .swiper-slide-next .projects-card {

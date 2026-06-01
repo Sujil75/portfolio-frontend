@@ -40,7 +40,7 @@ function ContactMe() {
                     </strong>
                 </div>
                 
-                <h1>Let's Build Something</h1>
+                <h1>Let's Build <span>Something</span></h1>
 
                 <p>Open to FullStack Roles, Open Collaborations, and Freelance Projects</p>
             </div>

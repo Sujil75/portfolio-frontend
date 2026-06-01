@@ -25,7 +25,7 @@
 }
 
 .logo-container p {
-    color: rgb(134, 6, 134);
+    color: var(--accent-purple);
     font-weight: bold;
     font-size: 30px;
 }
@@ -33,7 +33,7 @@
 .logo-container h3 {
     font-size: 23px;
 
-    background: linear-gradient(90deg, purple 0%, blue 50%, cyan 100%);
+    background: linear-gradient(90deg, var(--accent-purple) 0%, var(--accent-violet) 50%, var(--accent-cyan) 100%);
 
     background-clip: text;
     -webkit-background-clip: text;
