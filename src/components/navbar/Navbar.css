@@ -80,7 +80,7 @@
 
     width: 100%;
     height: 2px;
-    background: var(--accent-purple);
+    background: var(--accent-cyan);
 
     transform: translateX(0%) scaleX(0);
     transform-origin: center;

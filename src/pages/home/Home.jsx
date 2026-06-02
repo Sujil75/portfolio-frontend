@@ -33,7 +33,9 @@ function Home() {
                     >Get Resume</button>
                 </div>
 
-                <img src="" className='profile-img' alt="profile img" />
+                <div className="profile-img-container">
+                    <img src="" alt="profile img" />
+                </div>
             </section>
         </div>
     </section>

@@ -123,9 +123,38 @@
     animation: none;
 }
 
-.profile-img {
+.profile-img-container {
     height: 400px;
     width: 400px;
     border-radius: 100%;
-    border: 3px solid #000;
+    border: 3px solid var(--border-active);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    animation: item 6s linear infinite;
+}
+
+@keyframes item {
+    0% {
+        transform: translateY(5px);
+        box-shadow: 0 0 10px var(--border-active);
+    }
+    50% {
+        transform: translateY(-5px);
+        box-shadow: 0 0 30px var(--border-active);
+    }
+    100% {
+        transform: translateY(5px);
+        box-shadow: 0 0 10px var(--border-active);
+    }
+}
+
+.profile-img-container img {
+    width: 100%;
+    height: 100%;
+
+    border-radius: 100%;
+    background: grey;
 }

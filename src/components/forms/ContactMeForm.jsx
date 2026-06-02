@@ -1,6 +1,10 @@
 import React from 'react'
 
+import {icons} from '../../assets/icons.js'
+
 function ContactMeForm({viewerTypes}) {
+  const DropDownIcon = icons.arrDropdown;
+
   return (
     <form>
         <div className='form-row-container'>
@@ -20,13 +24,27 @@ function ContactMeForm({viewerTypes}) {
 
             <div>
                 <label htmlFor='viewerType'>Who Are you</label>
-                <select>
+                {/* <select>
                     {
                         viewerTypes.map(each => (
                             <option>{each}</option>
                         ))
                     }
-                </select>
+                </select> */}
+
+                <div className='viewer-types-button'>
+                    <button>
+                        {viewerTypes[0]}
+
+                        <DropDownIcon size={24} />
+                    </button>
+                    
+                    <ul className='viewer-types-options-container'>
+                        {viewerTypes.map(each => (
+                            <li>{each}</li>
+                        ))}
+                    </ul>
+                </div>
             </div>
         </div>
 
