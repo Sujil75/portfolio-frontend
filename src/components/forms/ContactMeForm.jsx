@@ -1,9 +1,11 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 import {icons} from '../../assets/icons.js'
 
 function ContactMeForm({viewerTypes}) {
   const DropDownIcon = icons.arrDropdown;
+  const [recruiterBtn, setRecruiterBtn] = useState(false)
+  const [recruiter, setRecruiter] = useState(viewerTypes[0].type)
 
   return (
     <form>
@@ -33,17 +35,24 @@ function ContactMeForm({viewerTypes}) {
                 </select> */}
 
                 <div className='viewer-types-button'>
-                    <button>
-                        {viewerTypes[0]}
+                    <button type='button' onClick={() => setRecruiterBtn(!recruiterBtn)}>
+                        {recruiter}
 
-                        <DropDownIcon size={24} />
+                        <DropDownIcon size={18} />
                     </button>
                     
-                    <ul className='viewer-types-options-container'>
-                        {viewerTypes.map(each => (
-                            <li>{each}</li>
-                        ))}
-                    </ul>
+                    {recruiterBtn ? (
+                        <ul className='viewer-types-options-container'>
+                            {viewerTypes.map(each => (
+                                <li key={each.id}>
+                                    <button
+                                        type='button'
+                                        onClick={() => (setRecruiterBtn(false), setRecruiter(each.type))}
+                                    >{each.type}</button>
+                                </li>
+                            ))}
+                        </ul>) : null
+                    }
                 </div>
             </div>
         </div>
@@ -63,7 +72,7 @@ function ContactMeForm({viewerTypes}) {
                 <textarea id='viewerMsg' />
             </div>
 
-            <button type='button'>Submit</button>
+            <button type='button' className='contactme-form-submit-btn'>Submit</button>
         </div>
     </form>
   )

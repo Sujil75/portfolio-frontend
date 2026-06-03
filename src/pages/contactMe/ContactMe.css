@@ -117,6 +117,14 @@
 
 .viewer-types-button button {
     padding-right: 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.viewer-types-button button:hover {
+    cursor: pointer;
 }
 
 .form-row-container div > textarea {
@@ -146,11 +154,17 @@
     border-radius: 15px;
     overflow: auto;
 
-    scrollbar-width: thin;
+    scrollbar-width: auto;
     scrollbar-color: var(--primary-color) transparent;
-    scrollbar-gutter: stable both-edges;
+    scrollbar-gutter: stable;
 
     font-size: 12px;
+}
+
+.viewer-types-options-container li > button {
+    width: 100%;
+    height: 100%;
+    border: none;
 }
 
 .viewer-types-options-container::-webkit-scrollbar {
@@ -165,10 +179,18 @@
     background: transparent;
 }
 
-.form-row-container div > button {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.contactme-form-submit-btn {
+    box-sizing: border-box;
+    padding: 10px 30px;
+    border-radius: 25px;
+    
+    background: var(--button-primary-bg);
+    color: var(--text-primary);
+    font-size: 14px;
+}
+
+.contactme-form-submit-btn:hover {
+    cursor: pointer;
 }
 
 .contact-me-list {

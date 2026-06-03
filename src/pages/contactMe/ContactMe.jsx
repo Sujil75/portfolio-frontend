@@ -5,27 +5,27 @@ import ContactMeDetailsCard from '../../components/cards/ContactMeDetailsCard';
 import './ContactMe.css'
 
 const viewerTypes = [
-    'Recruiters',
-    'Hiring Managers',
-    'Technical Interviewers',
-    'HR Professionals',
-    'Startup Founders',
-    'CTOs / Engineering Leaders',
-    'Potential Clients',
-    'Freelance Clients',
-    'Collaborators',
-    'Open Source Maintainers',
-    'Product Managers',
-    'Tech Mentors',
-    'Networking Connections',
-    'Investors (if startup-focused)',
-    'Fellow Developers / Peers',
-    'Community Members',
-    'Hackathon Judges',
-    'Internship Evaluators',
-    'Agency Recruiters',
-    'University / Placement Coordinators'
-]
+  { id: 'RECRUITERS', type: 'Recruiters' },
+  { id: 'HIRING_MANAGERS', type: 'Hiring Managers' },
+  { id: 'TECHNICAL_INTERVIEWERS', type: 'Technical Interviewers' },
+  { id: 'HR_PROFESSIONALS', type: 'HR Professionals' },
+  { id: 'STARTUP_FOUNDERS', type: 'Startup Founders' },
+  { id: 'CTOS_ENGINEERING_LEADERS', type: 'CTOs / Engineering Leaders' },
+  { id: 'POTENTIAL_CLIENTS', type: 'Potential Clients' },
+  { id: 'FREELANCE_CLIENTS', type: 'Freelance Clients' },
+  { id: 'COLLABORATORS', type: 'Collaborators' },
+  { id: 'OPEN_SOURCE_MAINTAINERS', type: 'Open Source Maintainers' },
+  { id: 'PRODUCT_MANAGERS', type: 'Product Managers' },
+  { id: 'TECH_MENTORS', type: 'Tech Mentors' },
+  { id: 'NETWORKING_CONNECTIONS', type: 'Networking Connections' },
+  { id: 'INVESTORS', type: 'Investors (if startup-focused)' },
+  { id: 'FELLOW_DEVELOPERS_PEERS', type: 'Fellow Developers / Peers' },
+  { id: 'COMMUNITY_MEMBERS', type: 'Community Members' },
+  { id: 'HACKATHON_JUDGES', type: 'Hackathon Judges' },
+  { id: 'INTERNSHIP_EVALUATORS', type: 'Internship Evaluators' },
+  { id: 'AGENCY_RECRUITERS', type: 'Agency Recruiters' },
+  { id: 'UNIVERSITY_PLACEMENT_COORDINATORS', type: 'University / Placement Coordinators' }
+];
 
 function ContactMe() {
   return (
