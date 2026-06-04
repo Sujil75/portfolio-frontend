@@ -78,6 +78,24 @@
     color: var(--text-secondary);
 }
 
+.profile-details-container h3 > span::after {
+    content: '|';
+    font-size: 40px;
+    font-weight: normal;
+    color: var(--accent-violet);
+
+    animation: blink 0.9s linear infinite;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    } 
+    50% {
+        opacity: 0;
+    }
+}
+
 .profile-details-container p {
     font-size: 13px;
     color: var(--text-disabled);

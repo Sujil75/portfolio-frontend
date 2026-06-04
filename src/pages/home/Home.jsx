@@ -1,45 +1,55 @@
 import React from 'react';
 import Navbar from '../../components/navbar/Navbar';
 
+import useHomeRolesDisplay from '../../hooks/useHomeRolesDisplay';
 import './Home.css'
 
+const demoRoles = [
+  "Frontend Developer",
+  "React Engineer",
+  "UI Designer",
+  "Problem Solver"
+]
+
 function Home() {
-  return (
-    <section id='Home' className='pages-container'>
-        <div className='glass'></div>
+    const text = useHomeRolesDisplay(demoRoles)
 
-        <div className='home-content'>
-            <div className='available-container'>
-                <div className='available-container-glass'></div>
+    return (
+        <section id='Home' className='pages-container'>
+            <div className='glass'></div>
 
-                <div className='topic-container available-topic'>
-                    <div className='available-notify-container'></div>
-                    
-                    <p>AVAILABLE TO WORK</p>
+            <div className='home-content'>
+                <div className='available-container'>
+                    <div className='available-container-glass'></div>
+
+                    <div className='topic-container available-topic'>
+                        <div className='available-notify-container'></div>
+                        
+                        <p>AVAILABLE TO WORK</p>
+                    </div>
                 </div>
+
+                <section className='home-profile-section'>
+                    <div className='profile-details-container'>
+                        <h1>Hello, I'm <span>Name</span></h1>
+
+                        <h3>I'm a <span>{text}</span></h3>
+
+                        <p>Crafting premium digital experiences with code, design, and obsessive attention to detail</p>
+                        
+                        <button
+                            type='button'
+                            className='resume-btn'
+                        >Get Resume</button>
+                    </div>
+
+                    <div className="profile-img-container">
+                        <img src="" alt="profile img" />
+                    </div>
+                </section>
             </div>
-
-            <section className='home-profile-section'>
-                <div className='profile-details-container'>
-                    <h1>Hello, I'm <span>Name</span></h1>
-
-                    <h3>I'm a <span>FullStack Developer</span></h3>
-
-                    <p>Crafting premium digital experiences with code, design, and obsessive attention to detail</p>
-                    
-                    <button
-                        type='button'
-                        className='resume-btn'
-                    >Get Resume</button>
-                </div>
-
-                <div className="profile-img-container">
-                    <img src="" alt="profile img" />
-                </div>
-            </section>
-        </div>
-    </section>
-  )
+        </section>
+    )
 }
 
 export default Home
