@@ -1,9 +1,12 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 import { icons } from '../../assets/icons'
+import MenuCard from '../cards/MenuCard'
+import { NavLinks } from '../../data/NavLink'
 import './Navbar.css'
 
 function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
   const MenuIcon = icons.hamburgerMenu
   const AdminIcon = icons.admin
 
@@ -15,14 +18,15 @@ function Navbar() {
         </div>
 
         <div className='nav-main-container'>
-          <div className='nav-content-container'>
-            <a href='#Home' className='nav-content'>Home</a>
-            <a href='#About' className='nav-content'>About</a>
-            <a href='#Skills' className='nav-content'>Skills</a>
-            <a href='#Education' className='nav-content'>Education</a>
-            <a href='#Projects' className='nav-content'>Projects</a>
-            <a href='#ContactMe' className='nav-content'>Contact Me</a>
-          </div>
+          <ul className='nav-content-container'>
+            {
+              NavLinks.map(each => (
+                <li key={each.id}>
+                  <a href={each.href} className='nav-content'>{each.content}</a>
+                </li>
+              ))
+            }
+          </ul>
 
           <button
             type='button'
@@ -34,8 +38,10 @@ function Navbar() {
 
         <div className='nav-mobile-main-container'>
           <button type='button'>
-            <MenuIcon size={24} className='mobile-icon' />
+            <MenuIcon size={24} className='mobile-icon' onClick={() => setIsMenuOpen(true)} />
           </button>
+
+          {isMenuOpen && <MenuCard setMenuBtn={setIsMenuOpen} />}
           
           <button type='button'>
             <AdminIcon size={24} className='mobile-icon' />

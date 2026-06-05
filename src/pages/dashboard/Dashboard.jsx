@@ -29,7 +29,7 @@ function Dashboard() {
 
             <Projects />
 
-            <ContactMe />
+            {/* <ContactMe /> */}
         </main>
 
         <footer>
