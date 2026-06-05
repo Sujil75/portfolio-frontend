@@ -26,16 +26,11 @@ function ContactMeForm({viewerTypes}) {
 
             <div>
                 <label htmlFor='viewerType'>Who Are you</label>
-                {/* <select>
-                    {
-                        viewerTypes.map(each => (
-                            <option>{each}</option>
-                        ))
-                    }
-                </select> */}
-
                 <div className='viewer-types-button'>
-                    <button type='button' onClick={() => setRecruiterBtn(!recruiterBtn)}>
+                    <button
+                        type='button' 
+                        onClick={() => setRecruiterBtn(!recruiterBtn)}
+                    >
                         {recruiter}
 
                         <DropDownIcon size={18} />
@@ -72,7 +67,7 @@ function ContactMeForm({viewerTypes}) {
                 <textarea id='viewerMsg' />
             </div>
 
-            <button type='button' className='contactme-form-submit-btn'>Submit</button>
+            <button type='button' className='contact-me-form-submit-btn'>Submit</button>
         </div>
     </form>
   )

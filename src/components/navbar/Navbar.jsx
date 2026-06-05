@@ -1,8 +1,12 @@
 import React from 'react'
 
+import { icons } from '../../assets/icons'
 import './Navbar.css'
 
 function Navbar() {
+  const MenuIcon = icons.hamburgerMenu
+  const AdminIcon = icons.admin
+
   return (
     <nav className='nav-container'>
         <div className='logo-container'>
@@ -25,6 +29,16 @@ function Navbar() {
             className='nav-admin-btn'
           >
             Admin
+          </button>
+        </div>
+
+        <div className='nav-mobile-main-container'>
+          <button type='button'>
+            <MenuIcon size={24} className='mobile-icon' />
+          </button>
+          
+          <button type='button'>
+            <AdminIcon size={24} className='mobile-icon' />
           </button>
         </div>
     </nav>

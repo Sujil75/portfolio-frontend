@@ -16,7 +16,7 @@ function useHomeRolesDisplay(roles) {const [role, setRole] = useState(roles[0])
 
                   setText(role.slice(0, textIdxRef.current))
 
-                  timerOutRef.current = setTimeout(listHandler, 300)
+                  timerOutRef.current = setTimeout(listHandler, 200)
               } else {
                   isDeletingRef.current = true
 
@@ -28,7 +28,7 @@ function useHomeRolesDisplay(roles) {const [role, setRole] = useState(roles[0])
 
                   setText(role.slice(0, textIdxRef.current))
 
-                  timerOutRef.current = setTimeout(listHandler, 300)
+                  timerOutRef.current = setTimeout(listHandler, 200)
               } else {
                   isDeletingRef.current = false
 

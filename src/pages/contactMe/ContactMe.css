@@ -179,7 +179,7 @@
     background: transparent;
 }
 
-.contactme-form-submit-btn {
+.contact-me-form-submit-btn {
     box-sizing: border-box;
     padding: 10px 30px;
     border-radius: 25px;
@@ -189,7 +189,7 @@
     font-size: 14px;
 }
 
-.contactme-form-submit-btn:hover {
+.contact-me-form-submit-btn:hover {
     cursor: pointer;
 }
 
