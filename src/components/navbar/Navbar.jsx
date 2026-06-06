@@ -44,7 +44,7 @@ function Navbar() {
           {isMenuOpen && <MenuCard setMenuBtn={setIsMenuOpen} />}
           
           <button type='button'>
-            <AdminIcon size={24} className='mobile-icon' />
+            <AdminIcon size={20} className='mobile-icon' />
           </button>
         </div>
     </nav>

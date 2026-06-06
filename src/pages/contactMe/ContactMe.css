@@ -5,6 +5,13 @@
     width: 100%;
 }
 
+@media screen and (max-width: 768px) {
+    .contact-me-container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 .contact-actions-container {
     width: 100%;
     height: 500px;
@@ -13,6 +20,13 @@
     justify-content: space-between;
     align-items: center;
     gap: 30px;
+}
+
+@media screen and (max-width:768px) {
+    .contact-actions-container {
+        flex-direction: column;
+        order: 2;
+    }
 }
 
 /* Viewer Contacts Card */
@@ -43,7 +57,19 @@
     color: var(--text-secondary);
 }
 
-.viewer-reach-out-form-container form {
+@media screen and (max-width:768px) {
+    .viewer-reach-out-form-container,
+    .viewer-reach-out-online-container {
+        width: 100%;
+    }
+
+    .viewer-reach-out-form-container h2,
+    .viewer-reach-out-online-container h2 {
+        font-size: 15px;
+    }
+}
+
+.form-container {
     height: inherit;
     width: 100%;
 
@@ -70,6 +96,22 @@
 
 .form-row-container h4 {
     color: var(--text);
+}
+
+@media screen and (max-width:768px) {
+    .form-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .form-row-container {
+        width: 100%;
+        gap: 10px;
+    }
+
+    .form-row-container h4 {
+        display: none;
+    }
 }
 
 .form-row-container div {
@@ -115,6 +157,24 @@
     font-size: 14px;
 }
 
+@media screen and (max-width:768px) {
+    .form-row-container div > label {
+        top: -5px;
+        font-size: 10px;
+    }
+
+    .viewer-types-button {
+        position: relative;
+    }
+
+    .form-row-container div > input,
+    .viewer-types-button button {
+        width: 220px;
+        height: 40px;
+        font-size: 10px;
+    }   
+}
+
 .viewer-types-button button {
     padding-right: 10px;
 
@@ -131,6 +191,12 @@
     height: 140px;
     width: 300px;
     padding: 20px;
+}
+
+@media screen and (max-width:768px) {
+    .form-row-container div > textarea {
+        width: 220px;
+    }
 }
 
 .form-row-container div > input:focus,
@@ -159,6 +225,16 @@
     scrollbar-gutter: stable;
 
     font-size: 12px;
+}
+
+@media screen and (max-width:768px) {
+    .viewer-types-options-container {
+        width: 220px;
+        position: absolute;
+        z-index: 10;
+        
+        top: 45px;
+    }
 }
 
 .viewer-types-options-container li > button {
@@ -193,6 +269,13 @@
     cursor: pointer;
 }
 
+@media screen and (max-width:768px) {
+    .contact-me-form-submit-btn {
+        padding: 8px 15px;
+        font-size: 10px;
+    }
+}
+
 .contact-me-list {
     box-sizing: border-box;
     width: 100%;
@@ -202,6 +285,12 @@
     display: flex;
     flex-direction: column;
     gap: 25px;
+}
+
+@media screen and (max-width:768px) {
+    .viewer-reach-out-online-container {
+        display: none;
+    }
 }
 
 .contact-me-blur-bg {

@@ -8,7 +8,7 @@ function ContactMeForm({viewerTypes}) {
   const [recruiter, setRecruiter] = useState(viewerTypes[0].type)
 
   return (
-    <form>
+    <form className='form-container'>
         <div className='form-row-container'>
             <h4>Details</h4>
 

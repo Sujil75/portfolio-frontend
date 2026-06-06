@@ -41,12 +41,10 @@
 }
 
 .topic-container {
+    box-sizing: border-box;
     border: 1px solid var(--border-active);
     border-radius: 50px;
-    width: fit-content;
-    padding: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 10px 20px;
     display: flex;
     align-items: center;
     gap: 20px;
@@ -79,4 +77,23 @@
 
 .pages-intro-container p {
     color: var(--text-muted);
+}
+
+@media screen and (max-width:768px) {
+    .pages-container {
+        padding: 50px 20px;
+        height: fit-content;
+    }
+
+    .pages-intro-container {
+        order: 1;
+    }
+
+    .pages-intro-container h1 {
+        font-size: 18px;
+    }
+
+    .pages-intro-container p {
+        font-size: 8px;
+    }
 }

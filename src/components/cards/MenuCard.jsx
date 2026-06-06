@@ -9,7 +9,7 @@ function MenuCard({setMenuBtn}) {
     return (
     <section className='mobile-menu-card'>
         <button type='button' onClick={() => setMenuBtn(false)}>
-            <CloseBtnIcon size={24} className='mobile-icon' />
+            <CloseBtnIcon size={15} className='mobile-icon' />
         </button>
 
         <hr />
