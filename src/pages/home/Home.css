@@ -128,13 +128,17 @@
     }
 
     .profile-details-container h3 {
-        font-size: 15px;
+        font-size: 13px;
         margin: 0;
         padding: 0;
     }
 
+    .profile-details-container h3 > span::after {
+        font-size: 20px;
+    }
+
     .profile-details-container p {
-        font-size: 10px;
+        font-size: 9px;
     }
 }
 
@@ -153,8 +157,8 @@
 
 @media screen and (max-width:768px) {
     .resume-btn {
-        font-size: 10px;
-        padding: 9px 12px;
+        font-size: 9px;
+        padding: 9px 11px;
         margin-top: 10px;
     }
 }
