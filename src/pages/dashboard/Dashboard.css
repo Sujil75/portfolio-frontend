@@ -53,6 +53,13 @@
     color: var(--accent-indigo);
 }
 
+@media screen and (max-width:768px) {
+    .topic-container {
+        font-size: 10px;
+        gap: 10px;
+    }
+}
+
 .pages-intro-container {
     width: 100%;
     display: flex;
