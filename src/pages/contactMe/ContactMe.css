@@ -61,6 +61,14 @@
 }
 
 @media screen and (max-width:768px) {
+    .viewer-reach-out-form-container {
+        order: 2;
+    }
+
+    .viewer-reach-out-online-container {
+        order: 1;
+    }
+
     .viewer-reach-out-form-container,
     .viewer-reach-out-online-container {
         width: 100%;

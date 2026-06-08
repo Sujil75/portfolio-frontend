@@ -9,25 +9,38 @@ function ProjectsCard({projectsData}) {
     <section>
         <Swiper
             modules={[Autoplay]}
-            slidesPerView={3}
             loop={true}
             speed={3000}
             spaceBetween={30}
             centeredSlides={true}
             autoplay={{
-                delay: 2500,
+                delay: 1500,
                 disableOnInteraction: true,
             }}
             className='projects-swiper'
+            breakpoints={{
+                0: {
+                    slidesPerView: 1,
+                    spaceBetween: 60,
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                }
+            }}
         >
             {
                 projectsData.map(edu => (
                     <SwiperSlide key={edu.id}>
                         <div className="projects-card">
-                            <h3>{edu.name}</h3>
-                            <h4>{edu.languages}</h4>
-                            <span>{edu.framework}</span>
-                            <p>{edu.description}</p>
+                            <img src='' className='project-img' />
+                            
+                            <div className='project-card-content'>
+                                <h3>{edu.name}</h3>
+                                <h4>{edu.languages}</h4>
+                                <span>{edu.framework}</span>
+                                <p>{edu.description}</p>
+                            </div>
                         </div>
                     </SwiperSlide>
                 ))
