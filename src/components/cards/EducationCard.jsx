@@ -8,10 +8,10 @@ import "swiper/css";
 
 function EducationCard({educationData}) { /* educationList */
   return (
-    <section className='education-section'>
+    <section>
         <Swiper
             modules={[Autoplay]}
-            slidesPerView={3}
+            slidesPerView={"auto"}
             centeredSlides={true}
             loop={true}
             spaceBetween={30}
@@ -21,6 +21,14 @@ function EducationCard({educationData}) { /* educationList */
                 disableOnInteraction: false
             }}
             className='education-swiper'
+            breakpoints={{
+                0: {
+                    slidesPerView: 1
+                },
+                768: {
+                    slidesPerView: 3
+                }
+            }}
         >
             {
                 educationData.map(edu => (

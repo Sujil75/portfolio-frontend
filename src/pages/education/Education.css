@@ -6,11 +6,13 @@
 }
 
 .education-swiper {
+    box-sizing: border-box;
     width: 100%;
     padding: 2rem 0;
 }
 
 .education-card {
+    box-sizing: border-box;
     background: var(--background-card);
     backdrop-filter: var(--backdrop-blur);
     -webkit-backdrop-filter: var(--backdrop-blur);
@@ -24,6 +26,22 @@
     transform: scale(0.8);
     opacity: 0.35;
     filter: blur(1px);
+}
+
+@media (max-width: 768px) {
+  .swiper {
+    overflow: hidden;
+  }
+
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+  }
+
+  .education-card {
+    width: 90%;
+    max-width: 300px;
+  }
 }
 
 .education-card h3 {
@@ -47,6 +65,12 @@
   line-height: 1.6;
 }
 
+@media screen and (max-width:768px) {
+  .education-card h3 {
+    font-size: 18px;
+  }
+}
+
 /* Center Card */
 .swiper-slide-active .education-card {
     transform: scale(1);
@@ -59,4 +83,11 @@
 .swiper-slide-prev .education-card, .swiper-slide-next .education-card {
     transform: scale(0.88);
     opacity: 0.45;
+}
+
+@media screen and (max-width:768px) {
+  .swiper-slide-next .education-card, .swiper-slide-prev .education-card {
+    opacity: 0.2;
+    transform: scale(0.75);
+  }
 }
