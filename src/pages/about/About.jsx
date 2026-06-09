@@ -1,9 +1,14 @@
 import React from 'react'
 
+import usePortfolio from '../../hooks/usePortfolio'
 import './About.css'
 
 function About() {
-  return (
+    const portfolio = usePortfolio()
+    const {name} = portfolio
+    console.log(name)
+
+    return (
     <section id='About' className='pages-container'>
         <div className='glass'></div>
 
@@ -34,7 +39,7 @@ function About() {
             </section>
         </div>
     </section>
-  )
+    )
 }
 
 export default About
