@@ -66,4 +66,8 @@
         width: fit-content;
         text-align: center;
     }
+
+    .heart-icon {
+        margin-left: 10px;
+    }
 }

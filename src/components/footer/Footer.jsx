@@ -1,8 +1,11 @@
 import React from 'react'
 
+import { icons } from '../../assets/icons'
 import './Footer.css'
 
-function Footer() {
+function Footer() { 
+  const HeartIcon = icons.heart
+
   return (
     <section className='footer-section'>
         <div className='footer-first-container'>
@@ -16,7 +19,7 @@ function Footer() {
             <div></div>
             <p>Framer Motion</p>
             <div></div>
-            <p> icon</p>
+            <HeartIcon size='12' className='heart-icon' />
         </div>
     </section>
   )
