@@ -5,17 +5,22 @@ import usePortfolio from '../../hooks/usePortfolio';
 import useHomeRolesDisplay from '../../hooks/useHomeRolesDisplay';
 import './Home.css'
 
-// const demoRoles = [
-//   "Frontend Developer",
-//   "React Engineer",
-//   "UI Designer",
-//   "Problem Solver"
-// ]
+const demoRoles = [
+  "Frontend Developer",
+  "React Engineer",
+  "UI Designer",
+  "Problem Solver"
+]
 
 function Home() {
     const portfolio = usePortfolio()
     const {name, role, resume} = portfolio
-    const text = useHomeRolesDisplay(role)
+    let roles = role
+
+    if (role === undefined) {
+        roles = demoRoles
+    }
+    const text = useHomeRolesDisplay(roles)
 
     return (
         <section id='Home' className='pages-container'>
