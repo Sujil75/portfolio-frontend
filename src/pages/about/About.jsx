@@ -5,8 +5,7 @@ import './About.css'
 
 function About() {
     const portfolio = usePortfolio()
-    const {name} = portfolio
-    console.log(name)
+    const desc = portfolio?.desc
 
     return (
     <section id='About' className='pages-container'>
@@ -27,7 +26,7 @@ function About() {
                 <div className='about-me-container'>
                     <div className='about-me-blur-bg'></div>
 
-                    <p>About me</p>
+                    <p>{desc}</p>
                 </div>
 
                 <div className='user-img-card'>

@@ -1,18 +1,21 @@
 import React from 'react';
 import Navbar from '../../components/navbar/Navbar';
 
+import usePortfolio from '../../hooks/usePortfolio';
 import useHomeRolesDisplay from '../../hooks/useHomeRolesDisplay';
 import './Home.css'
 
-const demoRoles = [
-  "Frontend Developer",
-  "React Engineer",
-  "UI Designer",
-  "Problem Solver"
-]
+// const demoRoles = [
+//   "Frontend Developer",
+//   "React Engineer",
+//   "UI Designer",
+//   "Problem Solver"
+// ]
 
 function Home() {
-    const text = useHomeRolesDisplay(demoRoles)
+    const portfolio = usePortfolio()
+    const {name, role, resume} = portfolio
+    const text = useHomeRolesDisplay(role)
 
     return (
         <section id='Home' className='pages-container'>
@@ -31,7 +34,7 @@ function Home() {
 
                 <section className='home-profile-section'>
                     <div className='profile-details-container'>
-                        <h1>Hello, I'm <span>Name</span></h1>
+                        <h1>Hello, I'm <span>{name}</span></h1>
 
                         <h3>I'm a <span>{text}</span></h3>
 
@@ -40,6 +43,7 @@ function Home() {
                         <button
                             type='button'
                             className='resume-btn'
+                            onClick={() => window.open(resume, '_blank', 'noopener, noreferrer')}
                         >Get Resume</button>
                     </div>
 
