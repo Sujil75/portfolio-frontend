@@ -1,10 +1,8 @@
 import React from 'react'
 
-import usePortfolio from '../../hooks/usePortfolio'
 import './About.css'
 
-function About() {
-    const portfolio = usePortfolio()
+function About({portfolio}) {
     const desc = portfolio?.desc
 
     return (

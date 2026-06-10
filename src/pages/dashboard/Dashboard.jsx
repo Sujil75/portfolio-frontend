@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext} from 'react';
 
 import Navbar from '../../components/navbar/Navbar';
 import Home from '../home/Home';
@@ -8,34 +8,46 @@ import Education from '../education/Education';
 import Projects from '../projects/Projects';
 import ContactMe from '../contactMe/ContactMe';
 import Footer from '../../components/footer/Footer';
+import Loader from '../../components/loader/Loader'
 
+import { AppContext } from '../../context/AppContext';
+import usePortfolio from '../../hooks/usePortfolio';
 import './Dashboard.css';
 
 function Dashboard() {
+  const {loader} = useContext(AppContext)
+  const portfolio = usePortfolio()
+
   return (
-    <section className='dashboard-container'>
-        <header>
-            <Navbar />
-        </header>
+    <>
+      {loader ? (
+        <Loader />
+      ) : (
+          <section className='dashboard-container'>
+            <header>
+                <Navbar />
+            </header>
 
-        <main className='main-container'>
-            <Home />
+            <main className='main-container'>
+                <Home portfolio={portfolio} />
 
-            <About />
+                <About portfolio={portfolio} />
 
-            <Skills />
+                <Skills portfolio={portfolio} />
 
-            <Education />
+                <Education portfolio={portfolio} />
 
-            <Projects />
+                <Projects portfolio={portfolio} />
 
-            <ContactMe />
-        </main>
+                <ContactMe portfolio={portfolio} />
+            </main>
 
-        <footer>
-          <Footer />
-        </footer>
-    </section>
+            <footer>
+              <Footer />
+            </footer>
+        </section>
+      )}
+    </>
   )
 }
 

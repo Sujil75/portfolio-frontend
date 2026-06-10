@@ -1,7 +1,6 @@
 import React from 'react';
 import Navbar from '../../components/navbar/Navbar';
 
-import usePortfolio from '../../hooks/usePortfolio';
 import useHomeRolesDisplay from '../../hooks/useHomeRolesDisplay';
 import './Home.css'
 
@@ -12,8 +11,7 @@ const demoRoles = [
   "Problem Solver"
 ]
 
-function Home() {
-    const portfolio = usePortfolio()
+function Home({portfolio}) {
     const {name, role, resume} = portfolio
     let roles = role
 

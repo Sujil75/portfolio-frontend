@@ -1,16 +1,21 @@
-import React from 'react'
-
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
+import { AppContext } from '../context/AppContext';
 
 function usePortfolio() {
+    const {setLoader} = useContext(AppContext)
     const [portfolioData, setPortfolioData] = useState({})
     const uri = 'https://portfolio-server-p2uz.onrender.com/api/portfolio'
 
     useEffect(() => {
         const fetchPortfolio = async () => {
             try {
+                setLoader(true)
                 const response = await fetch(uri)
                 const data = await response.json()
+
+                if (!response.ok) {
+                    throw new Error(`HTTP Error: ${response.status}`)
+                }
 
                 const updatedData = {
                     name: data.name,
@@ -53,11 +58,13 @@ function usePortfolio() {
                 setPortfolioData(updatedData)
             }catch (err) {
                 console.log('Error fetching data: ', err.message)
+            } finally {
+                setLoader(false)
             }
         }
 
         fetchPortfolio()
-    }, []);
+    }, [setLoader]);
 
     return portfolioData
 }
