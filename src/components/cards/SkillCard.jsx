@@ -1,15 +1,16 @@
 import React from 'react'
 
 function SkillCard({skillsList}) {
+  console.log(skillsList)
   return (
     <section>
         <ul className='skills-list-container'>
         {
-            skillsList.map(() => (
-            <li>
-                <img src="" alt="skill img" />
+            skillsList.map(each => (
+            <li key={each.id}>
+                <img src={each.img} alt="skill img" />
 
-                <h6>Skill Name</h6>
+                <h6>{each.name}</h6>
             </li>
             ))
         }

@@ -3,12 +3,8 @@ import React from 'react'
 import SkillCard from '../../components/cards/SkillCard';
 import './Skills.css'
 
-function Skills() {
-  const skillsList = [];
-
-  for (let i = 1; i <= 100; i++) {
-    skillsList.push(i);
-  };
+function Skills({portfolio}) {
+  const skillsList = portfolio?.skills;
 
   return (
     <section id='Skills' className='pages-container'>
@@ -25,7 +21,7 @@ function Skills() {
           <p>A living set of skills sharpened on real projects</p>
         </div>
 
-        <SkillCard skillsList={skillsList} />
+        {(skillsList !== undefined) && <SkillCard skillsList={skillsList} />}
       </div>
     </section>
   )
