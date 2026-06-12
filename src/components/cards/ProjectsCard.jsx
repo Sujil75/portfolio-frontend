@@ -5,6 +5,7 @@ import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 
 function ProjectsCard({projectsData}) {
+    console.log(projectsData)
   return (
     <section>
         <Swiper
@@ -37,8 +38,8 @@ function ProjectsCard({projectsData}) {
                             
                             <div className='project-card-content'>
                                 <h3>{edu.name}</h3>
-                                <h4>{edu.languages}</h4>
-                                <span>{edu.framework}</span>
+                                <h4>{edu.languages.join(', ')}</h4>
+                                <span>{edu.framework.join(', ')}</span>
                                 <p>{edu.description}</p>
                             </div>
                         </div>

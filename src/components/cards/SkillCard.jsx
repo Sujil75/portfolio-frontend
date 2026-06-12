@@ -1,7 +1,6 @@
 import React from 'react'
 
 function SkillCard({skillsList}) {
-  console.log(skillsList)
   return (
     <section>
         <ul className='skills-list-container'>

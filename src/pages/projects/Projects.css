@@ -5,6 +5,27 @@
     width: 100%;
 }
 
+.projects-card-section {
+  width: 100%;
+  height: 400px;
+  margin-top: 50px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width:768px) {
+  .projects-card-section {
+    height: 300px;
+    margin: 0;
+  }
+
+  .projects-card-section h2 {
+    font-size: 10px;
+  }
+}
+
 .projects-swiper {
     width: 100%;
     padding: 2rem 0;
