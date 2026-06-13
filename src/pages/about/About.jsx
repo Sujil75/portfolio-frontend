@@ -24,7 +24,13 @@ function About({portfolio}) {
                 <div className='about-me-container'>
                     <div className='about-me-blur-bg'></div>
 
-                    <p>{desc}</p>
+                    {desc !== undefined && (
+                        <>
+                            <p>{desc.slice(0, 378)}</p>
+                            <br />
+                            <p>{desc.slice(379)}</p>
+                        </>
+                    )}
                 </div>
 
                 <div className='user-img-card'>
