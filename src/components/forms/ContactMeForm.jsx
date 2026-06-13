@@ -14,13 +14,11 @@ function ContactMeForm({viewerTypes}) {
 
             <div>
                 <label htmlFor='viewerName'>Name</label>
-
                 <input id='viewerName' />
             </div>
 
             <div>
                 <label htmlFor='viewerEmail'>Email</label>
-
                 <input id='viewerEmail' />
             </div>
 

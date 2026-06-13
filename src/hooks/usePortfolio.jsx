@@ -49,7 +49,6 @@ function usePortfolio() {
                         id: contact._id,
                         name: contact.contact_name,
                         type: contact.contact_type,
-                        number: contact.contact_number,
                         link: contact.contact_link,
                         logo: contact.contact_logo,
                     })),
