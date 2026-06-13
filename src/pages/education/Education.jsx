@@ -3,38 +3,40 @@ import React from 'react'
 import EducationCard from '../../components/cards/EducationCard';
 import './Education.css';
 
-const educationData = [
-  {
-    id: 1,
-    degree: "B.Tech Computer Science",
-    institution: "XYZ University",
-    year: "2020 - 2024",
-    description: "Focused on fullstack development and AI."
-  },
-  {
-    id: 2,
-    degree: "Higher Secondary",
-    institution: "ABC School",
-    year: "2018 - 2020",
-    description: "Science stream with mathematics."
-  },
-  {
-    id: 3,
-    degree: "Secondary School",
-    institution: "DEF School",
-    year: "2016 - 2018",
-    description: "Foundational academic learning."
-  },
-  {
-    id: 4,
-    degree: "Certification in MERN",
-    institution: "Online Academy",
-    year: "2024",
-    description: "Advanced MERN stack specialization."
-  }
-];
+// const educationData = [
+//   {
+//     id: 1,
+//     degree: "B.Tech Computer Science",
+//     institution: "XYZ University",
+//     year: "2020 - 2024",
+//     description: "Focused on fullstack development and AI."
+//   },
+//   {
+//     id: 2,
+//     degree: "Higher Secondary",
+//     institution: "ABC School",
+//     year: "2018 - 2020",
+//     description: "Science stream with mathematics."
+//   },
+//   {
+//     id: 3,
+//     degree: "Secondary School",
+//     institution: "DEF School",
+//     year: "2016 - 2018",
+//     description: "Foundational academic learning."
+//   },
+//   {
+//     id: 4,
+//     degree: "Certification in MERN",
+//     institution: "Online Academy",
+//     year: "2024",
+//     description: "Advanced MERN stack specialization."
+//   }
+// ];
 
-function Education() {    
+function Education({portfolio}) {  
+    const educationData = portfolio?.educations
+  
     return (
     <section id='Education' className='pages-container'>
         <div className='glass'></div>
@@ -50,7 +52,13 @@ function Education() {
                 <p>Formal study and continuous growth</p>
             </div>
             
-            <EducationCard educationData={educationData} />
+            <div className='educations-card-section'>
+              {educationData !== undefined && educationData.length > 0 ? (
+                <ProjectsCard educationData={educationData} />
+              ) : (
+                <h2>Coming Soon...</h2>
+              )}
+            </div>
         </div>
     </section>
     )

@@ -56,7 +56,7 @@ function Projects({portfolio}) {
               {projectsData !== undefined && projectsData.length > 0 ? (
                 <ProjectsCard projectsData={projectsData} />
               ) : (
-                <h2>Coming Soon<span>...</span></h2>
+                <h2>Coming Soon...</h2>
               )}
             </div>
         </div>

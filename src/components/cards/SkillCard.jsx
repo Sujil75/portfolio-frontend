@@ -9,7 +9,7 @@ function SkillCard({skillsList}) {
             <li key={each.id}>
                 <img src={each.img} alt="skill img" />
 
-                <h6>{each.name}</h6>
+                <h5>{each.name}</h5>
             </li>
             ))
         }

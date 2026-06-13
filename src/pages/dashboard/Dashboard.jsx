@@ -39,7 +39,7 @@ function Dashboard() {
 
                 <Projects portfolio={portfolio} />
 
-                <ContactMe portfolio={portfolio} />
+                <ContactMe />
             </main>
 
             <footer>

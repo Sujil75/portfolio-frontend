@@ -5,6 +5,27 @@
     width: 100%;
 }
 
+.educations-card-section {
+  width: 100%;
+  height: 400px;
+  margin-top: 50px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width:768px) {
+  .educations-card-section {
+    height: 300px;
+    margin: 0;
+  }
+
+  .educations-card-section h2 {
+    font-size: 10px;
+  }
+}
+
 .education-swiper {
     box-sizing: border-box;
     width: 100%;
