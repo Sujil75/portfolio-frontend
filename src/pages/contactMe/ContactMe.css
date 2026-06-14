@@ -287,8 +287,7 @@
 }
 
 .contact-content {
-    width: 100%;
-    height: 100%;
+    background: transparent;
 }
 
 .contact-content:hover {
@@ -300,10 +299,25 @@
     width: 20px;
     object-fit: contain;
     box-shadow: var(--glow-primary);
+    
+    transition: transform 0.3s ease;
+    transform-style: preserve-3d;
+
+    background: transparent;
 }
+
+.contact-img:hover {
+    transform: scale(1.5);
+}
+
 @media screen and (max-width:768px) {
     .contact-me-list {
         flex-direction: row;
         gap: 10px;
+    }
+
+    .contact-img {
+        height: 15px;
+        width: 15px;
     }
 }
