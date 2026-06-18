@@ -13,6 +13,7 @@
 }
 
 .contact-actions-container {
+    position: relative;
     width: 100%;
     height: 500px;
 
@@ -58,6 +59,28 @@
     color: var(--text-secondary);
 }
 
+.warning-msg {
+    color: red;
+    font-size: 10px;
+}
+
+.message-toast {
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 3000;
+    bottom: 20px;
+
+    background: var(--overlay-dark);
+    padding: 12px 20px;
+    font-size: 13px;
+    border-radius: 25px;
+
+    transform: translateY(-20px);
+    transition: transform 0.2s ease-in-out;
+    pointer-events: none;
+    color: var(--text-primary);
+}
+
 @media screen and (max-width:768px) {
     .viewer-reach-out-form-container {
         width: 100%;
@@ -65,6 +88,11 @@
 
     .viewer-reach-out-form-container h2 {
         font-size: 15px;
+    }
+
+    .message-toast {
+        bottom: 40px;
+        font-size: 9px;
     }
 }
 

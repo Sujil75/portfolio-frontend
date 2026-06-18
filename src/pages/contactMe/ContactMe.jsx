@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 import ContactMeForm from '../../components/forms/ContactMeForm';
 import ContactMeDetailsCard from '../../components/cards/ContactMeDetailsCard';
@@ -7,6 +7,17 @@ import './ContactMe.css'
 
 function ContactMe({portfolio}) {
     const contactDetails = portfolio?.contact
+    const [message, setMessage] = useState("")
+
+    useEffect(() => {
+        if (!message) return
+
+        const timer = setTimeout(() => {
+            setMessage("")
+        }, 5000)
+
+        return () => clearTimeout(timer)
+    }, [setMessage, message])
 
     return (
     <section id='ContactMe' className='pages-container'>
@@ -29,7 +40,10 @@ function ContactMe({portfolio}) {
                 <div className='viewer-reach-out-form-container'>
                     <h2>Reach Out Directly</h2>
 
-                    <ContactMeForm viewerTypes={ViewerTypes} />
+                    <ContactMeForm viewerTypes={ViewerTypes} setMessage={setMessage} />
+
+                    {message && <p className='message-toast'>{message}</p>}
+                    <p className='warning-msg'>*Use authentic/brevo authenticated email, else emails wont be received by the owner and reply from the owner might get delayed</p>
                 </div>
 
                 {contactDetails !== undefined && <ContactMeDetailsCard contactDetails={contactDetails} />}
