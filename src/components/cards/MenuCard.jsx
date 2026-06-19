@@ -18,7 +18,10 @@ function MenuCard({setMenuBtn}) {
             {
                 NavLinks.map(each => (
                 <li key={each.id} onClick={() => setMenuBtn(false)}>
-                    <a href={each.href} className='nav-content'>{each.content}</a>
+                    <a 
+                        href={each.href} 
+                        className='nav-content'
+                    >{each.content}</a>
                 </li>
                 ))
             }

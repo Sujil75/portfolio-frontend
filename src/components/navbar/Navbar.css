@@ -115,6 +115,11 @@
     transform: translateX(0%) scaleX(1);
 }
 
+.nav-content-container a.active {
+    color: var(--text);
+    text-shadow: var(--bg-shadow);
+}
+
 .nav-admin-btn {
     box-sizing: border-box;
     padding: 9px;
@@ -198,5 +203,10 @@
         color: var(--text);
         text-decoration: none;
         font-size: 10px;
+    }
+
+    .nav-content-container a.active {
+        color: var(--text);
+        text-shadow: var(--bg-shadow);
     }
 }

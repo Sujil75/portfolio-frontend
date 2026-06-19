@@ -7,6 +7,7 @@ import './Navbar.css'
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [location, setLocation] = useState(NavLinks[0].href)
   const MenuIcon = icons.hamburgerMenu
   const AdminIcon = icons.admin
 
@@ -22,7 +23,14 @@ function Navbar() {
             {
               NavLinks.map(each => (
                 <li key={each.id}>
-                  <a href={each.href} className='nav-content'>{each.content}</a>
+                  <a 
+                    href={each.href} 
+                    onClick={() => setLocation(each.href)}
+                    className={
+                      location.toUpperCase() === `#${each.id}` 
+                      ? 'active' : ''
+                    }
+                  >{each.content}</a>
                 </li>
               ))
             }

@@ -89,6 +89,10 @@
     .viewer-reach-out-form-container h2 {
         font-size: 15px;
     }
+    
+    .warning-msg {
+        font-size: 8px;
+    }
 
     .message-toast {
         bottom: 40px;
