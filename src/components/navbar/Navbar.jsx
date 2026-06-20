@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 
 import { icons } from '../../assets/icons'
 import MenuCard from '../cards/MenuCard'
@@ -7,9 +7,28 @@ import './Navbar.css'
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [location, setLocation] = useState(window.location.hash)
+  const [location, setLocation] = useState(window.location.hash || NavLinks[0].href)
   const MenuIcon = icons.hamburgerMenu
   const AdminIcon = icons.admin
+
+  useEffect(() => {
+    const position = localStorage.getItem('scrollY')
+
+    if (position) {
+      window.scrollTo(0, position)
+    }
+  }, [])
+
+
+  window.addEventListener('beforeunload', () => {
+    const lastScroll = localStorage.getItem('scrollY')
+
+    if (lastScroll) {
+        localStorage.removeItem('scrollY')
+    }
+
+    localStorage.setItem('scrollY', window.scrollY)
+  })
 
   return (
     <nav className='nav-container'>

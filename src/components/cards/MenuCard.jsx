@@ -11,6 +11,16 @@ function MenuCard({setMenuBtn, location, setLocation}) {
         setLocation(href)
     }
 
+    window.addEventListener('beforeunload', () => {
+        const lastScroll = localStorage.getItem('scrollY')
+
+        if (lastScroll) {
+            localStorage.removeItem('scrollY')
+        }
+
+        localStorage.setItem('scrollY', window.scrollY)
+    })
+
     return (
     <section className='mobile-menu-card'>
         <button type='button' onClick={() => setMenuBtn(false)}>
