@@ -3,8 +3,13 @@ import React from 'react'
 import { icons } from '../../assets/icons'
 import { NavLinks } from '../../data/NavLink'
 
-function MenuCard({setMenuBtn}) {
+function MenuCard({setMenuBtn, location, setLocation}) {
     const CloseBtnIcon = icons.closeBtn
+
+    function chooseNavLink(href) {
+        setMenuBtn(false)
+        setLocation(href)
+    }
 
     return (
     <section className='mobile-menu-card'>
@@ -17,10 +22,13 @@ function MenuCard({setMenuBtn}) {
         <ul className='mobile-nav-content-container'>
             {
                 NavLinks.map(each => (
-                <li key={each.id} onClick={() => setMenuBtn(false)}>
+                <li key={each.id} onClick={() => chooseNavLink(each.href)}>
                     <a 
                         href={each.href} 
-                        className='nav-content'
+                        className={
+                            location === each.href ?
+                            'active' : ''
+                        }
                     >{each.content}</a>
                 </li>
                 ))

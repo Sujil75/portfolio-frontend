@@ -199,14 +199,15 @@
         list-style: none;
     }
 
-    .mobile-nav-content-container li > a {
-        color: var(--text);
-        text-decoration: none;
-        font-size: 10px;
-    }
-
-    .nav-content-container a.active {
+    .mobile-nav-content-container li > a.active {
         color: var(--text);
         text-shadow: var(--bg-shadow);
+        font-weight: bold;
+    }
+
+    .mobile-nav-content-container li > a {
+        color: var(--nav-inactive);
+        text-decoration: none;
+        font-size: 10px;
     }
 }

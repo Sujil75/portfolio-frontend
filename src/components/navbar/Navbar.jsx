@@ -7,7 +7,7 @@ import './Navbar.css'
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [location, setLocation] = useState(NavLinks[0].href)
+  const [location, setLocation] = useState(window.location.hash)
   const MenuIcon = icons.hamburgerMenu
   const AdminIcon = icons.admin
 
@@ -49,7 +49,7 @@ function Navbar() {
             <MenuIcon size={24} className='mobile-icon' onClick={() => setIsMenuOpen(true)} />
           </button>
 
-          {isMenuOpen && <MenuCard setMenuBtn={setIsMenuOpen} />}
+          {isMenuOpen && <MenuCard setMenuBtn={setIsMenuOpen} location={location} setLocation={setLocation} />}
           
           <button type='button'>
             <AdminIcon size={20} className='mobile-icon' />
