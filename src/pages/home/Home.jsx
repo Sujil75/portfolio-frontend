@@ -12,7 +12,7 @@ const demoRoles = [
 ]
 
 function Home({portfolio}) {
-    const {name, role, resume} = portfolio
+    const {name, role, resume, userImgHome} = portfolio
     let roles = role
 
     if (role === undefined) {
@@ -51,7 +51,7 @@ function Home({portfolio}) {
                     </div>
 
                     <div className="profile-img-container">
-                        <img src="" alt="profile img" />
+                        <img src={userImgHome} alt="profile img" />
                     </div>
                 </section>
             </div>

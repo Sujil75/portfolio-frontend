@@ -3,7 +3,7 @@ import React from 'react'
 import './About.css'
 
 function About({portfolio}) {
-    const desc = portfolio?.desc
+    const {desc, userImgAbt} = portfolio
 
     return (
     <section id='About' className='pages-container'>
@@ -35,7 +35,7 @@ function About({portfolio}) {
 
                 <div className='user-img-card'>
                     <img 
-                        src='https://imgs.search.brave.com/rqVkJY3vBi5aVMeigx1i3W3QuDhP6zRF_YDO2y8e3mA/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzE1L2Zj/LzI0LzE1ZmMyNGQx/ODM2NzQ0NDgwODdk/YmY4ODA5ODBhNjQ1/LmpwZw' 
+                        src={userImgAbt}
                         alt='user img' 
                     />
                 </div>

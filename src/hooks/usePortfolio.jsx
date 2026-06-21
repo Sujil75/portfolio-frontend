@@ -19,7 +19,8 @@ function usePortfolio() {
 
                 const updatedData = {
                     name: data.name,
-                    email: data.email,
+                    userImgHome: data.user_image_home,
+                    userImgAbt: data.user_image_about,
                     role: data.role,
                     desc: data.description,
                     briefDesc: data.brief_description,
