@@ -13,10 +13,25 @@ function Navbar() {
 
   useEffect(() => {
     const position = localStorage.getItem('scrollY')
+    const sections = document.querySelectorAll('section')
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          console.log(`#${entry.target.id}` === sections)
+        }
+      })
+    })
+
+    sections.forEach(section => {
+      observer.observe(section)
+    })
 
     if (position) {
       window.scrollTo(0, position)
     }
+
+    return () => observer.disconnect
   }, [])
 
 
