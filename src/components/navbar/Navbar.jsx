@@ -17,10 +17,13 @@ function Navbar() {
 
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          console.log(`#${entry.target.id}` === sections)
+        if (entry.isIntersecting && entry.intersectionRatio > 0) {
+          setLocation(`#${entry.target.id}`)
+          console.log(entry.target.id, entry.intersectionRatio)
         }
       })
+    }, {
+      threshold: 0.3,
     })
 
     sections.forEach(section => {
