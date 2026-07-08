@@ -1,10 +1,11 @@
 import React, { useEffect, useState, useContext } from 'react'
 import { AppContext } from '../context/AppContext';
+import { API_BASE_URL } from '../config/api';
 
 function usePortfolio() {
     const {setLoader} = useContext(AppContext)
     const [portfolioData, setPortfolioData] = useState({})
-    const uri = 'https://portfolio-server-p2uz.onrender.com/api/portfolio'
+    const uri = API_BASE_URL
 
     useEffect(() => {
         const fetchPortfolio = async () => {
