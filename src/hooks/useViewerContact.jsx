@@ -1,10 +1,11 @@
 import React, {useCallback, useState} from 'react'
+import { API_BASE_URL } from '../config/api'
 
 function useViewerContact() {
     const [msg, setMsg] = useState("")
 
     const contactData = useCallback(async data => {
-        const uri = 'https://portfolio-server-p2uz.onrender.com/api/portfolio/viewercontact'
+        const uri = `${API_BASE_URL}/viewercontact`
 
         try {
             // console.log("Preparing to send data: ", data)
