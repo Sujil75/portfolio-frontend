@@ -8,6 +8,7 @@ import './Navbar.css'
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [location, setLocation] = useState(window.location.hash || NavLinks[0].href)
+  const [crrSection, setCrrSection] = useState('Home')
   const MenuIcon = icons.hamburgerMenu
   const AdminIcon = icons.admin
 
@@ -19,7 +20,7 @@ function Navbar() {
       entries.forEach(entry => {
         if (entry.isIntersecting && entry.intersectionRatio > 0) {
           setLocation(`#${entry.target.id}`)
-          console.log(entry.target.id, entry.intersectionRatio)
+          setCrrSection(entry.target.id)
         }
       })
     }, {
@@ -28,6 +29,7 @@ function Navbar() {
 
     sections.forEach(section => {
       observer.observe(section)
+
     })
 
     if (position) {
@@ -86,7 +88,7 @@ function Navbar() {
             <MenuIcon size={24} className='mobile-icon' onClick={() => setIsMenuOpen(true)} />
           </button>
 
-          {isMenuOpen && <MenuCard setMenuBtn={setIsMenuOpen} location={location} setLocation={setLocation} />}
+          {isMenuOpen && <MenuCard setMenuBtn={setIsMenuOpen} location={location} setLocation={setLocation} crrSection={crrSection} />}
           
           <button type='button'>
             <AdminIcon size={20} className='mobile-icon' />
