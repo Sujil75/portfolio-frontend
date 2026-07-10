@@ -3,7 +3,7 @@ import React from 'react'
 import { icons } from '../../assets/icons'
 import { NavLinks } from '../../data/NavLink'
 
-function MenuCard({setMenuBtn, location, setLocation, crrSection}) {
+function MenuCard({setMenuBtn, location, setLocation}) {
     const CloseBtnIcon = icons.closeBtn
 
     function chooseNavLink(href) {
