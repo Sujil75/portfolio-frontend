@@ -8,47 +8,61 @@ import './Navbar.css'
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [location, setLocation] = useState(window.location.hash || NavLinks[0].href)
-  const [crrSection, setCrrSection] = useState('Home')
   const MenuIcon = icons.hamburgerMenu
   const AdminIcon = icons.admin
 
   useEffect(() => {
-    const position = localStorage.getItem('scrollY')
-    const sections = document.querySelectorAll('section')
+  const position = localStorage.getItem("scrollY");
+  const sections = document.querySelectorAll("section");
 
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting && entry.intersectionRatio > 0) {
-          setLocation(`#${entry.target.id}`)
-          setCrrSection(entry.target.id)
-        }
-      })
-    }, {
-      threshold: 0.3,
-    })
+  const handleScroll = () => {
+    let currentSection = "";
 
-    sections.forEach(section => {
-      observer.observe(section)
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
 
-    })
+      if (
+        window.scrollY >= sectionTop - 150 &&
+        window.scrollY < sectionTop + sectionHeight - 150 // 150 is navbar height
+      ) {
+        currentSection = section.id;
+      }
+    });
 
-    if (position) {
-      window.scrollTo(0, position)
+    if (currentSection) {
+      setLocation((prev) => {
+        const newLocation = `#${currentSection}`;
+        return prev === newLocation ? prev : newLocation;
+      });
     }
+  };
 
-    return () => observer.disconnect
-  }, [])
+  if (position) {
+    window.scrollTo(0, Number(position));
+  }
+
+  handleScroll();
+
+  window.addEventListener("scroll", handleScroll);
+
+  return () => {
+    window.removeEventListener("scroll", handleScroll);
+  };
+}, []);
 
 
-  window.addEventListener('beforeunload', () => {
-    const lastScroll = localStorage.getItem('scrollY')
+useEffect(() => {
+  const handleBeforeUnload = () => {
+    localStorage.setItem("scrollY", window.scrollY);
+  };
 
-    if (lastScroll) {
-        localStorage.removeItem('scrollY')
-    }
+  window.addEventListener("beforeunload", handleBeforeUnload);
 
-    localStorage.setItem('scrollY', window.scrollY)
-  })
+  return () => {
+    window.removeEventListener("beforeunload", handleBeforeUnload);
+  };
+}, []);
 
   return (
     <nav className='nav-container'>
@@ -66,7 +80,7 @@ function Navbar() {
                     href={each.href} 
                     onClick={() => setLocation(each.href)}
                     className={
-                      location.toUpperCase() === `#${each.id}` 
+                      location === each.href
                       ? 'active' : ''
                     }
                   >{each.content}</a>
@@ -88,7 +102,7 @@ function Navbar() {
             <MenuIcon size={24} className='mobile-icon' onClick={() => setIsMenuOpen(true)} />
           </button>
 
-          {isMenuOpen && <MenuCard setMenuBtn={setIsMenuOpen} location={location} setLocation={setLocation} crrSection={crrSection} />}
+          {isMenuOpen && <MenuCard setMenuBtn={setIsMenuOpen} location={location} setLocation={setLocation} />}
           
           <button type='button'>
             <AdminIcon size={20} className='mobile-icon' />
