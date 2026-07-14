@@ -3,17 +3,30 @@
     z-index: 2;
 
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.skills-card-section {
+    box-sizing: border-box;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
 }
 
 .skills-list-container {
     list-style: none;
-    width: 100%;
+    width: 50%;
     height: 400px;
+    padding: 10px;
     
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: 10px;
+    gap: 15px;
 
     overflow: auto;
     flex-wrap: wrap;
@@ -37,19 +50,21 @@
 
 .skills-list-container li {
     box-sizing: border-box;
-    width: 100px;
-    height: 100px;
+    width: fit-content;
+    height: fit-content;
 
     display: flex;
     flex-direction: column;
+    gap: 5px;
 }
 
 .skills-list-container li > img {
     width: 100%;
-    height: 75%;
+    height: 50px;
     object-fit: contain;
-    border: 1px solid #fff;
+    background: var(--background-card);
     border-radius: 25px;
+    box-shadow: 0 0 6px var(--accent-violet);
 }
 
 .skills-list-container li > h5 {
@@ -60,16 +75,25 @@
     align-items: center;
     justify-content: center;
     color: var(--text);
+
+    font-size: 12px;
 }
 
 @media screen and (max-width:768px) {
+    .skills-card-section {
+        order: 1;
+        width: 100%;
+    }
+
     .skills-list-container {
         height: 300px;
+        width: 100%;
     }
 
     .skills-list-container li {
         width: 50px;
         height: 50px;
+        gap: 2px;
     }
 
     .skills-list-container li > img {

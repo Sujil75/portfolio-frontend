@@ -2,7 +2,7 @@ import React from 'react'
 
 function SkillCard({skillsList}) {
   return (
-    <section>
+    <section className='skills-card-section'>
         <ul className='skills-list-container'>
         {
             skillsList.map(each => (

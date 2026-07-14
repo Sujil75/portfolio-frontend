@@ -73,8 +73,8 @@
 }
 
 .user-img-card {
-    height: 400px;
-    width: 400px;
+    height: 390px;
+    width: 310px;
 
     background: var(--background-primary);
     border-radius: 25px;

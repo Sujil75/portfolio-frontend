@@ -58,7 +58,7 @@ function usePortfolio() {
 
                 setPortfolioData(updatedData)
             }catch (err) {
-                console.log('Error fetching data: ', err.message)
+                throw new Error("No Data Fetched, ", err.message)
             } finally {
                 setLoader(false)
             }
