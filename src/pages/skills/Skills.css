@@ -12,54 +12,87 @@
 .skills-card-section {
     box-sizing: border-box;
     width: 100%;
+    height: fit-content;
+    max-height: 400px;
 
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+    gap: 20px;
+}
+
+.skills-row {
+    width: 100%;
+    overflow: hidden;
+}
+
+.skills-list-container,
+.skills-list-center-container {
+    box-sizing: border-box;
+    list-style: none;
+
+    width: max-content;
+    height: 100px;
+
+    padding: 5px 0;
+
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+
+    will-change: transform;
 }
 
 .skills-list-container {
-    list-style: none;
-    width: 50%;
-    height: 400px;
-    padding: 10px;
-    
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 15px;
-
-    overflow: auto;
-    flex-wrap: wrap;
-
-    scrollbar-width: none;
+    animation: scroll 20s linear infinite;
 }
 
-/* .skills-list-container::-webkit-scrollbar {
-    scrollbar-width: thin;
-    width: 8px;
+.skills-list-center-container {
+    animation: anti-scroll 20s linear infinite;
 }
 
-.skills-list-container::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0.8);
-    border-radius: 100px;
+.skills-list-container:hover,
+.skills-list-center-container:hover {
+    animation-play-state: paused;
 }
 
-.skills-list-container::-webkit-scrollbar-track {
-    background: transparent;
-} */
-
-.skills-list-container li {
+.skills-list-container li,
+.skills-list-center-container li {
     box-sizing: border-box;
     width: fit-content;
     height: fit-content;
 
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 5px;
 }
 
-.skills-list-container li > img {
-    width: 100%;
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes anti-scroll {
+    from {
+        transform: translateX(-50%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.skills-list-container li > img,
+.skills-list-center-container li > img {
+    width: 100px;
     height: 50px;
     object-fit: contain;
     background: var(--background-card);
@@ -67,13 +100,13 @@
     box-shadow: 0 0 6px var(--accent-violet);
 }
 
-.skills-list-container li > h5 {
+.skills-list-container li > h5,
+.skills-list-center-container li > h5 {
     height: 25%;
     text-align: center;
 
     display: flex;
     align-items: center;
-    justify-content: center;
     color: var(--text);
 
     font-size: 12px;
