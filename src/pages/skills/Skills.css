@@ -45,11 +45,11 @@
 }
 
 .skills-list-container {
-    animation: scroll 20s linear infinite;
+    animation: scroll-x 20s linear infinite;
 }
 
 .skills-list-center-container {
-    animation: anti-scroll 20s linear infinite;
+    animation: anti-scroll-x 20s linear infinite;
 }
 
 .skills-list-container:hover,
@@ -70,7 +70,7 @@
     gap: 5px;
 }
 
-@keyframes scroll {
+@keyframes scroll-x {
     from {
         transform: translateX(0);
     }
@@ -80,7 +80,7 @@
     }
 }
 
-@keyframes anti-scroll {
+@keyframes anti-scroll-x {
     from {
         transform: translateX(-50%);
     }
@@ -116,24 +116,74 @@
     .skills-card-section {
         order: 1;
         width: 100%;
+        flex-direction: row;
+    }
+
+    .skills-row {
+        height: 300px;
+        width: 100px;
+    }
+
+    .skills-list-container,
+    .skills-list-center-container {
+        width: fit-content;
+        height: max-content;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0;
     }
 
     .skills-list-container {
-        height: 300px;
-        width: 100%;
+        animation: scroll-y 18s linear infinite;
     }
 
-    .skills-list-container li {
-        width: 50px;
+    .skills-list-center-container {
+        animation: anti-scroll-y 18s linear infinite;
+    }
+
+    .skills-list-container:hover,
+    .skills-list-center-container:hover {
+        animation-play-state: running;
+    }
+
+    @keyframes scroll-y {
+        from {
+            transform: translateY(-50%);
+        }
+
+        to {
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes anti-scroll-y {
+        from {
+            transform: translateY(0);
+        }
+
+        to {
+            transform: translateY(-50%);
+        }
+    }
+
+    .skills-list-container li,
+    .skills-list-center-container li {
+        flex-shrink: 0;
+        width: fit-content;
         height: 50px;
         gap: 2px;
     }
 
-    .skills-list-container li > img {
+    .skills-list-container li > img,
+    .skills-list-center-container li > img {
         border-radius: 10px;
+        height: 50px;
+        width: 50px;
     }
 
-    .skills-list-container li > h5 {
+    .skills-list-container li > h5,
+    .skills-list-center-container li > h5 {
         font-size: 8px;
         margin-top: 5px;
     }
