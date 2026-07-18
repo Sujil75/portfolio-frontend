@@ -4,12 +4,12 @@ import { icons } from '../../assets/icons'
 import './Footer.css'
 
 function Footer() { 
-  const HeartIcon = icons.heart
+  const {HeartIcon, CopyrightIcon} = icons
 
   return (
     <section className='footer-section'>
         <div className='footer-first-container'>
-            <img src="" alt='copyright icon' />
+            <CopyrightIcon size="25" className='copyright-icon' />
 
             <p>2026 <span>Portfolio</span> -- Crafted With care.</p>
         </div>

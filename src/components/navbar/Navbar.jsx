@@ -8,8 +8,8 @@ import './Navbar.css'
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [location, setLocation] = useState(window.location.hash || NavLinks[0].href)
-  const MenuIcon = icons.hamburgerMenu
-  const AdminIcon = icons.admin
+  const {MenuIcon} = icons
+  const {AdminIcon} = icons
 
   useEffect(() => {
   const position = localStorage.getItem("scrollY");

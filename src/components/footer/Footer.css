@@ -35,6 +35,10 @@
         gap: 0;
         text-align: center;
     }
+
+    .footer-first-container p {
+        font-size: 8px;
+    }
 }
 
 .footer-first-container img {
@@ -65,6 +69,11 @@
     .footer-second-container p {
         width: fit-content;
         text-align: center;
+        font-size: 8px;
+    }
+
+    .copyright-icon {
+        margin-right: 7px;
     }
 
     .heart-icon {

@@ -4,7 +4,7 @@ import { icons } from '../../assets/icons'
 import { NavLinks } from '../../data/NavLink'
 
 function MenuCard({setMenuBtn, location, setLocation}) {
-    const CloseBtnIcon = icons.closeBtn
+    const {CloseBtnIcon} = icons
 
     function chooseNavLink(href) {
         setMenuBtn(false)

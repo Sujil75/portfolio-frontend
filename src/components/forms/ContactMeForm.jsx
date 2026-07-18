@@ -4,7 +4,7 @@ import {icons} from '../../assets/icons.js'
 import useViewerContact from '../../hooks/useViewerContact.jsx';
 
 function ContactMeForm({viewerTypes, setMessage}) {
-  const DropDownIcon = icons.arrDropdown;
+  const {DropDownIcon} = icons;
   const [recruiterBtn, setRecruiterBtn] = useState(false)
   const [recruiter, setRecruiter] = useState(viewerTypes[0].type)
   const [viewerName, setViewerName] = useState("")
