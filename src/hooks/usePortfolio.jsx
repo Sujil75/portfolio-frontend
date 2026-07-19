@@ -34,9 +34,11 @@ function usePortfolio() {
                     })),
                     educations: data.educations.map(edu => ({
                         id: edu._id,
-                        name: edu.education_name,
-                        img: edu.education_desc,
-                        progress: edu.education_certificate_img,
+                        name: edu.name,
+                        institute: edu.institute_name,
+                        brief: edu.brief_description,
+                        img: edu.certificate_img,
+                        issuedOn: edu.issued_on,
                     })),
                     projects: data.projects.map(project => ({
                         id: project._id,

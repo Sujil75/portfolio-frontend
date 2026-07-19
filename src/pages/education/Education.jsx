@@ -23,7 +23,7 @@ function Education({portfolio}) {
             
             <div className='educations-card-section'>
               {educationData !== undefined && educationData.length > 0 ? (
-                <ProjectsCard educationData={educationData} />
+                <EducationCard educationData={educationData} />
               ) : (
                 <h2>Will be updated soon...</h2>
               )}

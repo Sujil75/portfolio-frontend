@@ -8,10 +8,10 @@ import "swiper/css";
 
 function EducationCard({educationData}) { /* educationList */
   return (
-    <section>
+    <section className='swiper-section'>
         <Swiper
             modules={[Autoplay]}
-            slidesPerView={"auto"}
+            slidesPerView={3}
             centeredSlides={true}
             loop={true}
             spaceBetween={30}
@@ -34,10 +34,10 @@ function EducationCard({educationData}) { /* educationList */
                 educationData.map(edu => (
                     <SwiperSlide key={edu.id}>
                         <div className="education-card">
-                            <h3>{edu.degree}</h3>
-                            <h4>{edu.institution}</h4>
-                            <span>{edu.year}</span>
-                            <p>{edu.description}</p>
+                            <h3>{edu.name}</h3>
+                            <h4>{edu.institute}</h4>
+                            <span>{edu.issuedOn}</span>
+                            <p>{edu.brief}</p>
                         </div>
                     </SwiperSlide>
                 ))
