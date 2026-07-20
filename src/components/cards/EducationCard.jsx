@@ -15,18 +15,21 @@ function EducationCard({educationData}) { /* educationList */
             centeredSlides={true}
             loop={true}
             spaceBetween={30}
-            speed={1000}
+            speed={3000}
             autoplay={{
-                delay: 2500,
+                delay: 3500,
                 disableOnInteraction: false
             }}
             className='education-swiper'
             breakpoints={{
                 0: {
-                    slidesPerView: 1
+                    slidesPerView: 1,
+                    autoplay: {
+                        delay: 3000,
+                    }
                 },
                 768: {
-                    slidesPerView: 3
+                    slidesPerView: 3,
                 }
             }}
         >
@@ -34,10 +37,22 @@ function EducationCard({educationData}) { /* educationList */
                 educationData.map(edu => (
                     <SwiperSlide key={edu.id}>
                         <div className="education-card">
-                            <h3>{edu.name}</h3>
-                            <h4>{edu.institute}</h4>
-                            <span>{edu.issuedOn}</span>
-                            <p>{edu.brief}</p>
+                            <img 
+                                src={edu.img} 
+                                alt="certificate img" 
+                            />
+                            <div>
+                                <h3>{edu.name}</h3>
+                                <h4>{edu.institute}</h4>
+                                <span>
+                                    {new Date(edu.issuedOn).toLocaleDateString("en-us", {
+                                        month: "long",
+                                        day: "numeric",
+                                        year: "numeric"
+                                    })}
+                                </span>
+                                <p>{edu.brief}</p>
+                            </div>
                         </div>
                     </SwiperSlide>
                 ))
