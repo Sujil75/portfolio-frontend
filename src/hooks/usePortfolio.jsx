@@ -39,6 +39,7 @@ function usePortfolio() {
                         brief: edu.brief_description,
                         img: edu.certificate_img,
                         issuedOn: edu.issued_on,
+                        drive: edu.drive_link,
                     })),
                     projects: data.projects.map(project => ({
                         id: project._id,

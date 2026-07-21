@@ -14,7 +14,7 @@ A modern, responsive, and dynamic portfolio built with **React + Vite**. The app
 
 ## 📸 Preview
 
-> Add screenshots or GIFs of your portfolio here.
+> ![](D:\VS Code\Portfolio\portfolio-frontend\src\assets\Portfolio_GIF.gif)
 
 ---
 

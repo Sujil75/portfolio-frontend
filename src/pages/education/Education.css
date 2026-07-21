@@ -75,13 +75,13 @@
   margin-bottom: 15px;
 }
 
-.education-card div {
+.education-card-content {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
 
-.education-card h3 {
+.education-card-content h3 {
   color: white;
   font-size: 1.3rem;
 
@@ -90,7 +90,14 @@
   padding: 0;
 }
 
-.education-card h4 {
+.education-card-content div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.3rem 0;
+}
+
+.education-card-content div > h4 {
   color: #c4b5fd;
   margin-top: 0.8rem;
   font-size: 0.9rem;
@@ -99,7 +106,27 @@
   padding: 0;
 }
 
-.education-card span {
+.education-card-content div > a {
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: var(--accent-purple);
+}
+
+.education-card-content div > a:hover {
+  animation: fade 0.5s ease-in-out;
+}
+
+@keyframes fade {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0.5;
+  }
+}
+
+.education-card-content span {
   display: block;
   color: #9ca3af;
   font-size: 0.8rem;
@@ -108,7 +135,7 @@
   padding: 0;
 }
 
-.education-card p {
+.education-card-content p {
   color: #e5e7eb;
   line-height: 1.6;
   font-size: 0.9rem;
@@ -122,29 +149,33 @@
     height: 50%;
   }
 
-  .education-card div {
+  .education-card-content {
     gap: 8px;
   }
 
-  .education-card h3 {
+  .education-card-content h3 {
     font-size: 0.6rem;
     margin: 0;
     padding: 0;
   }
 
-  .education-card h4 {
+  .education-card-content div > h4 {
     font-size: 0.5rem;
     margin: 0;
     padding: 0;
   }
 
-  .education-card span {
+  .education-card-content div > a {
+    font-size: 0.4rem;
+  }
+
+  .education-card-content span {
     font-size: 0.4rem;
     margin: 0;
     padding: 0;
   }
 
-  .education-card p {
+  .education-card div > p {
     font-size: 0.5rem;
     margin: 0;
     padding: 0;

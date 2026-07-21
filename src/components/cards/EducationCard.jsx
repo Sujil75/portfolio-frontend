@@ -18,7 +18,7 @@ function EducationCard({educationData}) { /* educationList */
             speed={3000}
             autoplay={{
                 delay: 3500,
-                disableOnInteraction: false
+                disableOnInteraction: true
             }}
             className='education-swiper'
             breakpoints={{
@@ -41,9 +41,15 @@ function EducationCard({educationData}) { /* educationList */
                                 src={edu.img} 
                                 alt="certificate img" 
                             />
-                            <div>
+                            <div className='education-card-content'>
                                 <h3>{edu.name}</h3>
-                                <h4>{edu.institute}</h4>
+                                <div>
+                                    <h4>{edu.institute}</h4>
+                                    <a
+                                        href={edu.drive}
+                                        target='_blank'
+                                    >Certificate Drive Link...</a>
+                                </div>
                                 <span>
                                     {new Date(edu.issuedOn).toLocaleDateString("en-us", {
                                         month: "long",
