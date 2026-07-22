@@ -89,6 +89,12 @@
   margin-top: 0.8rem;
 }
 
+.project-card-content div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .project-card-content span {
   display: block;
   margin: 1rem 0;

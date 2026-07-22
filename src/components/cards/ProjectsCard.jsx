@@ -39,6 +39,12 @@ function ProjectsCard({projectsData}) {
                             <div className='project-card-content'>
                                 <h3>{edu.name}</h3>
                                 <h4>{edu.languages.join(', ')}</h4>
+
+                                <div>
+                                    <a href='' target='_blank'>Deployed Link</a>
+                                    <a href='' target='_blank'>Github Link</a>
+                                </div>
+                                
                                 <span>{edu.framework.join(', ')}</span>
                                 <p>{edu.description}</p>
                             </div>
